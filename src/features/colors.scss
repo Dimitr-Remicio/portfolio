@@ -1,0 +1,45 @@
+.light {
+  --background-color: #f5f4f4;
+  --background-color-20: #f5f4f400;
+  --text-color:#000000;
+  --text-color-c:#f5f4f4;
+  --text-contrast:#000000;
+  
+  --arrow: #000000;
+  --arrow-hover: #230bff91;
+  --icon-fill-hdr: #00000000;
+  --stroke-icon: #000000;
+  --icon-fill-hdr-h: #230bff91;
+  --stroke-icon-h: #f5f4f4;
+
+  --accent-color:#230bff;
+  --shadow-color:#0a005f7e;
+  --typing-color:#0a005f;
+  --button-color:#230bff;
+
+
+  --bg-pattern: url(/src/images/bgWhite.png);
+}
+.dark {
+  --background-color: #040404;
+  --background-color-20: #04040400;
+
+  --text-color:#fcfcfc;
+  --text-color-c:#000000;
+  --text-contrast:#ffffff;
+  
+  --arrow: #ffffff;
+  --arrow-hover: #A0FF90;
+  --icon-fill-hdr: #ffffff00;
+  --icon-fill-hdr-h: #A0FF90;
+  --stroke-icon: #A0FF90;
+  --stroke-icon-h: #000000;
+
+  
+  --button-color:#A0FF90;
+  --accent-color:#A0FF90;
+  --typing-color:#A0FF90;
+  --shadow-color:#a1ff908c;
+
+  --bg-pattern: url(/src/images/bgDark.png);
+}

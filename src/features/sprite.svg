@@ -1,0 +1,11 @@
+
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="IconX" viewBox="0 0 32 32" width="30px" height="30px">
+        <path class="iconcolor" fill="" d="M30 24.398l-8.406-8.398 8.406-8.398-5.602-5.602-8.398 8.402-8.402-8.402-5.598 5.602 8.398 8.398-8.398 8.398 5.598 5.602 8.402-8.402 8.398 8.402z"></path>
+    </symbol>
+    <symbol id="Vector41" viewBox="0 0 325 32" width="170px" height="20px">
+        <path fill="" d="M179.947 0h-160.905l-18.566 18.566 18.566 12.377h314.195v-3.332h-128.535l-24.755-27.611z"></path>
+    </symbol>
+  </defs>
+</svg>

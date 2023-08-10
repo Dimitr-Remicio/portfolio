@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createContext, useState, useEffect } from "react";
+
+import "./App.scss";
+
+import Home from "./components/home/HomeName";
+import Container from "./components/Container/Container";
+
+import ProjectList from "./components/Projects/ProjectList/ProjectList";
+import ProjectItem from "./components/Projects/ProjectItem/ProjectItem";
+
+import projects from "./services/projects.json";
+import Dark from "./components/arrow/arrows";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState("light");
+
+  const ThemeContext = createContext(null);
+  const title = {
+    second: "Projects",
+  };
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <>
+      {/* <button style={{cursor:'pointer', position:'absolute', zIndex:'20'}}
+    onClick={toggleTheme}>hola</button> */}
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <svg
+          className="iconModeDark"
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          fill="none"
+          id="chk"
+          viewBox="0 0 60 60"
+          onClick={toggleTheme}
+        >
+          <path
+            className="linedarkmd"
+            stroke=""
+            stroke-linecap="square"
+            stroke-width="2"
+            d="M1 9.76V1h9.345M37.21 1h8.76v8.76m0 25.699v9.345h-8.76m-26.866 0H1v-9.345"
+          />
+          <g className="moon" clip-path="url(#a)">
+            <path
+              fill=""
+              d="M27.317 26.092a7.41 7.41 0 0 1-7.41-7.41c0-1.348.386-2.594 1.015-3.681C17.51 15.985 15 19.093 15 22.823A8.177 8.177 0 0 0 23.176 31c3.729 0 6.84-2.512 7.824-5.922-1.09.627-2.336 1.014-3.683 1.014Z"
+            />
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="" d="M15 15h16v16H15z" />
+            </clipPath>
+          </defs>
+        </svg>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+
+
+
+      <Dark toggle={toggleTheme} onClick={toggleTheme} />
+
+      <Container>
+          <div className='shadowHome'></div>
+        <Home />
+      </Container>
+
+      <Container>
+        <ProjectList title={title.second}>
+          <ThemeContext.Provider value={theme}>
+            <ProjectItem data={projects} Context={ThemeContext} />
+          </ThemeContext.Provider>
+        </ProjectList>
+      </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
