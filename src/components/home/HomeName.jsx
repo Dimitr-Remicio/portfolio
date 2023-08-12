@@ -39,7 +39,7 @@ export default function Home() {
             <div className={s.patternBG}></div>   
 
             <div className={s.contHome}>
-                <p className={s.contHome__p}>I'M</p>
+                <p className={s.contHome__p}>I`&apos`M</p>
                 <div className={s.contitle}>
                     {/* <h1 className={s.contHome__h1}>FRONT-END</h1><div className={s.barTyping}></div> */}
                     
