@@ -8,11 +8,11 @@ const ProjectItem = ({data, Context}) => {
 
     // const body = document.querySelector('#body');
     const theme = useContext(Context);
-
-
+    const image = './src/images/';
+    
     return (
         // data.length > 1 ? <h1>error</h1> : 
-        data.map(({ id, number, title, description, image, link, orientation}) => (
+        data.map(({ id, number, title, description, link, orientation}) => (
             <li key={id} className={'contitem__' + orientation } > 
                 {/* <div className={s.contitem}> */}
                     <div className={s.contitem__info}>
@@ -35,7 +35,7 @@ const ProjectItem = ({data, Context}) => {
                         
                         {
                             image.length > 0  ? (
-                                <img src={image + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
+                                <img src={image + title + '-preview-' + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
                                 )
                                 :
                                 (

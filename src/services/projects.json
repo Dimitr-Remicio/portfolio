@@ -4,7 +4,7 @@
         "number": "01",
         "title": "yersi",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/qq8yvh8m/yersi-preview-",
+        
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/Yersi/",
         "inProcess":true
@@ -46,7 +46,7 @@
     {
         "id":"5",
         "number": "05",
-        "title": "filmoteka",
+        "title": "filmoteka-1",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
         "image": "https://i.postimg.cc/CLGsFt7F/filmoteka-1-preview-",
         "orientation":"right",
@@ -57,8 +57,7 @@
     {
         "id":"6",
         "number": "06",
-        "title": "filmoteka",
-        "subtitle": "(remastered)",
+        "title": "filmoteka-2",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
         "image": "https://i.postimg.cc/8krbYsrf/filmoteka-2-preview-",
         "orientation":"left",
