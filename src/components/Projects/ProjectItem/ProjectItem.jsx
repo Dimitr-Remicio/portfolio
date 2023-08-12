@@ -8,7 +8,7 @@ const ProjectItem = ({data, Context}) => {
 
     // const body = document.querySelector('#body');
     const theme = useContext(Context);
-    const image = '/portfolio/src/images/';
+    const image = './portfolio/src/images/';
     
     return (
         // data.length > 1 ? <h1>error</h1> : 
@@ -35,7 +35,7 @@ const ProjectItem = ({data, Context}) => {
                         
                         {
                             image.length > 0  ? (
-                                <img src={image + title + '-preview-' + theme } id='Anim_tion' className={s.contitem__img} alt="image not found" />
+                                <img src={image + title + '-preview-' + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
                                 )
                                 :
                                 (
