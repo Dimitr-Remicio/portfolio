@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 
 import "./App.scss";
+import "./actions.js";
 
 import Home from "./components/home/HomeName";
 import Container from "./components/Container/Container";
@@ -12,7 +13,7 @@ import projects from "./services/projects.json";
 import Dark from "./components/arrow/arrows";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const ThemeContext = createContext(null);
   const title = {
@@ -32,8 +33,6 @@ function App() {
 
   return (
     <>
-      {/* <button style={{cursor:'pointer', position:'absolute', zIndex:'20'}}
-    onClick={toggleTheme}>hola</button> */}
       <div>
         <svg
           className="iconModeDark"
@@ -48,11 +47,11 @@ function App() {
           <path
             className="linedarkmd"
             stroke=""
-            stroke-linecap="square"
-            stroke-width="2"
+            strokeLinecap="square"
+            strokeWidth="2"
             d="M1 9.76V1h9.345M37.21 1h8.76v8.76m0 25.699v9.345h-8.76m-26.866 0H1v-9.345"
           />
-          <g className="moon" clip-path="url(#a)">
+          <g className="moon" clipPath="url(#a)">
             <path
               fill=""
               d="M27.317 26.092a7.41 7.41 0 0 1-7.41-7.41c0-1.348.386-2.594 1.015-3.681C17.51 15.985 15 19.093 15 22.823A8.177 8.177 0 0 0 23.176 31c3.729 0 6.84-2.512 7.824-5.922-1.09.627-2.336 1.014-3.683 1.014Z"
@@ -73,7 +72,7 @@ function App() {
 
       <Container>
           <div className='shadowHome'></div>
-        <Home />
+        <Home data-anchor="slide1"/>
       </Container>
 
       <Container>

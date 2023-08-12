@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import '../../features/colors.scss';
 import PropTypes from 'prop-types';
 
@@ -9,35 +8,22 @@ import './arrow.scss';
 
 
 function Dark() {
-  const [theme, setTheme] = useState('light');
   
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  };
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-
   return (
     <>
       <div className="header-right">
-        <div className={`Dark ${theme}`} id="Darkbutton">
+        <div className={`Dark`} id="Darkbutton">
           <div style={style}>
           </div>
         </div>
           <div className="navcont">
-            <a href="">
+            <a href="#Home">
               <svg className={style.iconX} viewBox="0 0 32 32" width="30px" height="30px">
                 <use className='headericon' href={sprite + "#IconX"}>
                 </use>
               </svg>
             </a>
-            <a href="">
+            <a href="#Projects">
               <svg className={style.iconX} viewBox="0 0 32 32" width="30px" height="30px">
                 <use className='headericon' href={sprite + "#IconX"}>
                 </use>
@@ -64,13 +50,12 @@ function Dark() {
       </div>
 
       <div className="header-top">
-        <div className={`Dark ${theme}`} id="Darkbutton">
+        <div className={`Dark `} id="Darkbutton">
           <div style={style}>
             <input
               type="checkbox"
               className={style.checkbox}
               id="chk"
-              onClick={toggleTheme}
             />
             <label className={style.label} htmlFor="chk">
               <div className={style.ball}></div>

@@ -1,28 +1,32 @@
 [
     {
+        "id":"1",
         "number": "01",
         "title": "yersi",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/FHwXgYtF/yersi-preview-",
+        "image": "https://i.postimg.cc/qq8yvh8m/yersi-preview-",
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/Yersi/",
         "inProcess":true
     },
     {
+        "id":"2",
         "number": "02",
         "title": "web-studio",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "./portfolio/src/services/web-studio-preview-",
+        "image": "https://i.postimg.cc/tJ0FbtVZ/web-studio-preview-",
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/goit-markup-hw-08/",
         "inProcess":false
 
     },
     {
+        "id":"3",
+     
         "number": "03",
         "title": "ice-cream",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "../images/ice-cream-preview-",
+        "image": "https://i.postimg.cc/7LWgsyHN/ice-cream-preview-",
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/iceCream2.0/",
         "inProcess":false
@@ -30,30 +34,33 @@
 
     },
     {
-        "number": "04",
+    "id":"4",
+    "number": "04",
         "title": "barber-shop",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "./images/barber-shop-preview-",
+        "image": "https://i.postimg.cc/26g76Ng5/barber-shop-preview-",
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/BarberShop/"
 
     },
     {
+        "id":"5",
         "number": "05",
         "title": "filmoteka",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "/src/images/filmoteka-1-preview-",
+        "image": "https://i.postimg.cc/CLGsFt7F/filmoteka-1-preview-",
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/Filmoteka1/",
         "inProcess":false
 
     },
     {
+        "id":"6",
         "number": "06",
         "title": "filmoteka",
         "subtitle": "(remastered)",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": ".w/src/images/filmoteka-2-preview-",
+        "image": "https://i.postimg.cc/8krbYsrf/filmoteka-2-preview-",
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/filmoteka2/",
         "inProcess":false

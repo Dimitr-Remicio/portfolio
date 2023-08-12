@@ -21,6 +21,8 @@ export default function Headers() {
           rel="stylesheet"
         />
         <title>Dimitr Remicio</title>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/easings.min.js"></script>
       </Helmet>
     </div>
   );

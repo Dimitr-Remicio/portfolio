@@ -13,29 +13,29 @@ const ProjectItem = ({data, Context}) => {
     return (
         // data.length > 1 ? <h1>error</h1> : 
         data.map(({ id, number, title, description, image, link, orientation}) => (
-            <li key={id} className={'contitem__' + orientation }> 
+            <li key={id} className={'contitem__' + orientation } > 
                 {/* <div className={s.contitem}> */}
                     <div className={s.contitem__info}>
                         <div className={s.contitem__descrp}>
                             <div className={s.numberitem}>
-                                <div className={s.numberitem__svg}>
-                                    <svg className={s.iconX} width="178" height="17" fill="none">
+                                <div className={s.numberitem__svg} id='Anim_tion'>
+                                    <svg className={s.iconX} width="178" height="17" fill="none" >
                                         <use style={{fill:'var(--accent-color)'}} href={sprite + "#Vector41"}>
                                         </use>
                                     </svg>
                                 </div>
-                                <div className={s.numberitem__number}>{number}</div>
+                                <div className={s.numberitem__number}id='Anim_tion'>{number}</div>
                             </div>
-                            <div className={s.descrp__title}>{title}</div>
+                            <p className={s.descrp__title} id='Anim_tion'>{title}</p>
                         </div>
-                        <div className={s.contitem__description}>{description}</div>
-                        <div><button ><a className='linkhover' href={link} target='_blank'>View</a></button></div>
+                        <div className={s.contitem__description} id='Anim_tion'>{description}</div>
+                        <div id="Anim_tion" className='divbutton'><a id="linkhover" className={s.button} href={link} target='_blank' rel='noreferrer'>View</a></div>
                     </div>
-                    <div className={s.contitem__imgCont}>
+                    <div className={s.contitem__imgCont}id='Anim_tion' >
                         
                         {
                             image.length > 0  ? (
-                                <img src={image + theme + '.jpg'} className={s.contitem__img} alt="image not found" />
+                                <img src={image + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
                                 )
                                 :
                                 (
