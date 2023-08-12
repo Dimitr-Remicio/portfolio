@@ -14,7 +14,6 @@
         "number": "02",
         "title": "web-studio",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/tJ0FbtVZ/web-studio-preview-",
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/goit-markup-hw-08/",
         "inProcess":false
@@ -26,7 +25,6 @@
         "number": "03",
         "title": "ice-cream",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/7LWgsyHN/ice-cream-preview-",
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/iceCream2.0/",
         "inProcess":false
@@ -38,7 +36,6 @@
     "number": "04",
         "title": "barber-shop",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/26g76Ng5/barber-shop-preview-",
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/BarberShop/"
 
@@ -48,7 +45,6 @@
         "number": "05",
         "title": "filmoteka-1",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/CLGsFt7F/filmoteka-1-preview-",
         "orientation":"right",
         "link":"https://dimitr-remicio.github.io/Filmoteka1/",
         "inProcess":false
@@ -59,7 +55,7 @@
         "number": "06",
         "title": "filmoteka-2",
         "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image": "https://i.postimg.cc/8krbYsrf/filmoteka-2-preview-",
+        
         "orientation":"left",
         "link":"https://dimitr-remicio.github.io/filmoteka2/",
         "inProcess":false
