@@ -8,7 +8,7 @@ const ProjectItem = ({data, Context}) => {
 
     // const body = document.querySelector('#body');
     const theme = useContext(Context);
-    const image = './src/images/';
+    const image = '../../images/';
     
     return (
         // data.length > 1 ? <h1>error</h1> : 
