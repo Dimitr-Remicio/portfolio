@@ -10,7 +10,7 @@ export default defineConfig({
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split('.').at(1);
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+          if (/png|jpg|jpeg|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'images';
           }
           return `assets/${extType}/[name][extname]`;

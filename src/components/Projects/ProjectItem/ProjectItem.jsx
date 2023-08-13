@@ -37,7 +37,8 @@ const ProjectItem = ({data, Context}) => {
                     <div className={s.contitem__imgCont}id='Anim_tion' >
                         {
                             image.length > 0  ? (
-                                <img src={ASSETS_DIR + image + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
+                                // <img src={ASSETS_DIR + image + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
+                                <img src={image} id='Anim_tion' className={s.contitem__img} alt="image not found" />
                                 )
                                 :
                                 (
