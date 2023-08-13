@@ -1,4 +1,6 @@
-const blob = document.querySelector("#blob");
+
+setTimeout(() => {
+  const blob = document.querySelector("#blob");
 
 document.onpointermove = (e) => {
   const { clientX, clientY } = e;
@@ -10,6 +12,5 @@ document.onpointermove = (e) => {
     },
     { duration: 2000, fill: "forwards" }
   );
-};
 
-    
+};}, 2000);
