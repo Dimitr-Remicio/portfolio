@@ -3,17 +3,19 @@ import { useContext } from 'react';
 
 import s from './ProjectItem.module.scss';
 import sprite from '../../../features/sprite.svg';
+import { ASSETS_DIR } from '../../../enviroments';
+
 
 const ProjectItem = ({data, Context}) => {
 
     // const body = document.querySelector('#body');
     const theme = useContext(Context);
-    const image = "../../src/images/";
-    const view = "-preview-";
+    // const image = "../../src/images/";
+    // const view = "-preview-";
     
     return (
         // data.length > 1 ? <h1>error</h1> : 
-        data.map(({ id, number, title, description, link, orientation}) => (
+        data.map(({ id, number, title, image, description, link, orientation}) => (
             <li key={id} className={'contitem__' + orientation } > 
                 {/* <div className={s.contitem}> */}
                     <div className={s.contitem__info}>
@@ -33,10 +35,9 @@ const ProjectItem = ({data, Context}) => {
                         <div id="Anim_tion" className='divbutton'><a id="linkhover" className={s.button} href={link} target='_blank' rel='noreferrer'>View</a></div>
                     </div>
                     <div className={s.contitem__imgCont}id='Anim_tion' >
-                        
                         {
                             image.length > 0  ? (
-                                <img src={image + title + view + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
+                                <img src={ASSETS_DIR + image + theme + '.jpg'} id='Anim_tion' className={s.contitem__img} alt="image not found" />
                                 )
                                 :
                                 (

@@ -3,13 +3,15 @@ import { createContext, useState, useEffect } from "react";
 import "./App.scss";
 import "./actions.js";
 
-import Home from "./components/home/HomeName";
 import Container from "./components/Container/Container";
+
+import Home from "./components/home/HomeName";
 
 import ProjectList from "./components/Projects/ProjectList/ProjectList";
 import ProjectItem from "./components/Projects/ProjectItem/ProjectItem";
-
 import projects from "./services/projects.json";
+
+
 import Dark from "./components/arrow/arrows";
 
 function App() {
@@ -71,8 +73,10 @@ function App() {
       <Dark toggle={toggleTheme} onClick={toggleTheme} />
 
       <Container>
-          <div className='shadowHome'></div>
-        <Home data-anchor="slide1"/>
+          <>
+            <div className='shadowHome'></div>
+            <Home/>
+          </>
       </Container>
 
       <Container>
@@ -81,6 +85,10 @@ function App() {
             <ProjectItem data={projects} Context={ThemeContext} />
           </ThemeContext.Provider>
         </ProjectList>
+      </Container>
+
+      <Container>
+
       </Container>
     </>
   );

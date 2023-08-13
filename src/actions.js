@@ -8,6 +8,8 @@ document.onpointermove = (e) => {
       left: `${clientX}px`,
       top: `${clientY}px`,
     },
-    { duration: 2500, fill: "forwards" }
+    { duration: 2000, fill: "forwards" }
   );
 };
+
+    
