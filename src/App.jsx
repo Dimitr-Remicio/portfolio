@@ -75,14 +75,16 @@ function App() {
       <Container>
           <>
             <div className='shadowHome'></div>
-            <Home/>
+            <ThemeContext.Provider value={theme}>
+              <Home Context={ThemeContext}/>
+            </ThemeContext.Provider>
           </>
       </Container>
 
       <Container>
         <ProjectList title={title.second}>
           <ThemeContext.Provider value={theme}>
-            <ProjectItem data={projects} Context={ThemeContext} />
+            <ProjectItem data={projects}/>
           </ThemeContext.Provider>
         </ProjectList>
       </Container>
