@@ -69,7 +69,7 @@ function App() {
           <>
           <div className='shadowHome'></div>
             <ThemeContext.Provider value={theme}>
-              <Home Context={ThemeContext}/>
+              <Home contain={ThemeContext}/>
             </ThemeContext.Provider>
           </>
       </Container>
