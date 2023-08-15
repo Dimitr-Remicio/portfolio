@@ -2,6 +2,7 @@ setTimeout(() => {
   const blob = document.querySelector("#blob");
 
 document.onpointermove = (e) => {
+  e.preventDefault();
   const { clientX, clientY } = e;
 
   blob.animate(

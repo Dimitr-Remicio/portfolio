@@ -12,7 +12,6 @@ const ProjectList = ({children}) => {
         )
 };
 ProjectList.propTypes = {
-    title: PropTypes.string.isRequired,
     children: PropTypes.element,
   };
 

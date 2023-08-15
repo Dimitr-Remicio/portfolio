@@ -68,9 +68,7 @@ function App() {
       <Container>
           <>
           <div className='shadowHome'></div>
-            <ThemeContext.Provider value={theme}>
               <Home contain={ThemeContext}/>
-            </ThemeContext.Provider>
           </>
       </Container>
 

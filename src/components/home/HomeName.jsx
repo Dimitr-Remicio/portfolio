@@ -36,7 +36,7 @@ const Home = ({contain}) => {
       <div className={s.section} id="Home">
         <div id="blob" className="blob"></div>
         <div id="blur" className="blur"></div>
-        <div className={'back'+ color}></div>
+        <div className={s.bgHome}></div>
 
         <div className={s.contHome}>
           <p className={s.contHome__p}>I`M</p>
