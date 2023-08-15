@@ -1,4 +1,3 @@
-
 setTimeout(() => {
   const blob = document.querySelector("#blob");
 

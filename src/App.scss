@@ -1,4 +1,6 @@
 
+
+
 .contitem__left{
     width: 100%;    
     display: flex;
@@ -13,7 +15,6 @@
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-  
   }
   
 
@@ -91,21 +92,27 @@
   }
 
   
-.Section{
 
-  &__projects{
-    position: absolute;
+  #Projects{
     z-index: 25;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-top: 5%;
 
+    padding: 10% 0% 0% 0%;
+  }
   
+  #About{
+    z-index: 25;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    padding: 10% 0% 0% 0%;
   }
 
-}
 
 
 

@@ -13,8 +13,7 @@ function Dark() {
     <>
       <div className="header-right">
         <div className={`Dark`} id="Darkbutton">
-          <div style={style}>
-          </div>
+          
         </div>
           <div className="navcont">
             <a href="#Home">
@@ -29,7 +28,7 @@ function Dark() {
                 </use>
               </svg>
             </a>
-            <a href="">
+            <a href="#About">
               <svg className={style.iconX} viewBox="0 0 32 32" width="30px" height="30px">
                 <use className='headericon' href={sprite + "#IconX"}>
                 </use>
@@ -52,14 +51,7 @@ function Dark() {
       <div className="header-top">
         <div className={`Dark `} id="Darkbutton">
           <div style={style}>
-            <input
-              type="checkbox"
-              className={style.checkbox}
-              id="chk"
-            />
-            <label className={style.label} htmlFor="chk">
-              <div className={style.ball}></div>
-            </label>
+            
           </div>
         </div>
         <div className="content_header-top"></div>

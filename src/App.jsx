@@ -10,7 +10,7 @@ import Home from "./components/home/HomeName";
 import ProjectList from "./components/Projects/ProjectList/ProjectList";
 import ProjectItem from "./components/Projects/ProjectItem/ProjectItem";
 import projects from "./services/projects.json";
-
+import About from "./components/About/About";
 
 import Dark from "./components/arrow/arrows";
 
@@ -18,9 +18,7 @@ function App() {
   const [theme, setTheme] = useState("dark");
 
   const ThemeContext = createContext(null);
-  const title = {
-    second: "Projects",
-  };
+
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -66,15 +64,10 @@ function App() {
           </defs>
         </svg>
       </div>
-
-
-
-
       <Dark toggle={toggleTheme} onClick={toggleTheme} />
-
       <Container>
           <>
-            <div className='shadowHome'></div>
+          <div className='shadowHome'></div>
             <ThemeContext.Provider value={theme}>
               <Home Context={ThemeContext}/>
             </ThemeContext.Provider>
@@ -82,7 +75,7 @@ function App() {
       </Container>
 
       <Container>
-        <ProjectList title={title.second}>
+        <ProjectList>
           <ThemeContext.Provider value={theme}>
             <ProjectItem data={projects}/>
           </ThemeContext.Provider>
@@ -90,7 +83,7 @@ function App() {
       </Container>
 
       <Container>
-
+          <About Context={ThemeContext}/>
       </Container>
     </>
   );

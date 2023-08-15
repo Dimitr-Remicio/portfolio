@@ -1,13 +1,13 @@
 import { useEffect, useRef, useContext  } from "react";
 import Typed from "typed.js";
-
-
 import s from "./Home.module.scss";
 
 
 
-const Home = ({Context}) => {
+const Home = ({contain}) => {
   const el = useRef(null);
+  const color = useContext(contain);
+
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -29,15 +29,13 @@ const Home = ({Context}) => {
   }, []);
   
   
-  const color = useContext(Context);
   
   return (
     <>
-      {/* <img className={s.patternBG} alt="" />    */}
 
       <div className={s.section} id="Home">
-        <div id="blob" className={s.blob}></div>
-        <div id="blur" className={s.blur}></div>
+        <div id="blob" className="blob"></div>
+        <div id="blur" className="blur"></div>
         <div className={'back'+ color}></div>
 
         <div className={s.contHome}>
