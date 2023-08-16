@@ -1,6 +1,8 @@
 import s from "./About.module.scss";
 import Tilt from 'react-parallax-tilt';
 
+import image from "../../../public/assets/images/testimage.png";
+
 const About = () => {
   return (
     <>
@@ -41,12 +43,14 @@ const About = () => {
           // gyroscope={true}
           glareEnable={true} 
           glareMaxOpacity={0.5} glareColor="#ffffff" glarePosition="bottom" glareBorderRadius="10px">
-            <img
+            {/* <img
               src="./src/assets/images/testimage.png"
               id="Anim_tion"
               className="contitem__img"
               alt="image not found"
-              />
+              /> */}
+          <img src={image} alt="" className="contitem__img" id="Anim_tion" ></img>
+
           </Tilt>
           </div>
           </Tilt>

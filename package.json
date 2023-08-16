@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-parallax-tilt": "^1.7.158",
+    "react-scripts": "^5.0.1",
     "sass": "^1.64.2",
     "typed.js": "^2.0.12"
   },
