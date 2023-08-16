@@ -7,8 +7,7 @@ import { useContext } from 'react';
 const ProjectItem = ({ data, Context }) => {
 
   const theme = useContext(Context);
-  const image = "./public/assets/images/";
-  const view = "-preview-";
+  const image = `./public/assets/images/`;
 
 
   return data.map(
@@ -72,7 +71,7 @@ const ProjectItem = ({ data, Context }) => {
                 glareBorderRadius="10px"
               >
                 <img
-                  src={image + title + view + theme + '.jpg'}
+                  src={image + title + theme + '.jpg'}
                   id="Anim_tion"
                   className="contitem__img"
                   alt="image not found"
