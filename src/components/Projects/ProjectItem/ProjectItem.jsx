@@ -11,7 +11,7 @@ const ProjectItem = ({ data, Context }) => {
 
 
   return data.map(
-    ({ id, number, title, description, link, orientation }) => (
+    ({ id, number, name, title, description, link, orientation }) => (
       <li key={id} className={"contitem__" + orientation}>
         <div className={s.contitem__info}>
           <div className={s.contitem__descrp}>
@@ -71,7 +71,7 @@ const ProjectItem = ({ data, Context }) => {
                 glareBorderRadius="10px"
               >
                 <img
-                  src={image + title + theme + '.jpg'}
+                  src={image + name + theme + '.jpg'}
                   id="Anim_tion"
                   className="contitem__img"
                   alt="image not found"
