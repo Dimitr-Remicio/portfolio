@@ -19,8 +19,8 @@
   --button-color:#230bff;
 
 
-  --bg-pattern: url(/src/assets/images/bgWhite.png);
-  --root-bg:url(src/assets/images/rootbgw.png);
+  --bg-pattern: url(/public/assets/images/bgWhite.png);
+  --root-bg:url(/public/assets/images/rootbgw.png);
 }
 .dark {
   --background-color: #161616;
@@ -43,6 +43,6 @@
   --typing-color:#A0FF90;
   --shadow-color:#a1ff908c;
   
-  --bg-pattern: url(/src/assets/images/bgDark.png);
-  --root-bg:url(src/assets/images/rootbgd.png);
+  --bg-pattern: url(/public/assets/images/bgDark.png);
+  --root-bg:url(/public/assets/images/rootbgd.png);
 }

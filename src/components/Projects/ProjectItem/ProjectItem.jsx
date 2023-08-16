@@ -7,8 +7,7 @@ import { useContext } from 'react';
 const ProjectItem = ({ data, Context }) => {
 
   const theme = useContext(Context);
-  const image = `./public/assets/images/`;
-
+  const image = `../../../public/assets/images/`;
 
   return data.map(
     ({ id, number, name, title, description, link, orientation }) => (
