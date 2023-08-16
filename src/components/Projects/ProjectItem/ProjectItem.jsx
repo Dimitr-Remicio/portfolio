@@ -1,10 +1,18 @@
 import s from "./ProjectItem.module.scss";
 import sprite from "../../../features/sprite.svg";
 import Tilt from "react-parallax-tilt";
+import { useContext } from 'react';
 
-const ProjectItem = ({ data }) => {
+
+const ProjectItem = ({ data, Context }) => {
+
+  const theme = useContext(Context);
+  const image = "../../../public/assets/images/";
+  const view = "-preview-";
+
+
   return data.map(
-    ({ id, number, title, image, description, link, orientation }) => (
+    ({ id, number, title, description, link, orientation }) => (
       <li key={id} className={"contitem__" + orientation}>
         <div className={s.contitem__info}>
           <div className={s.contitem__descrp}>
@@ -64,7 +72,7 @@ const ProjectItem = ({ data }) => {
                 glareBorderRadius="10px"
               >
                 <img
-                  src={image}
+                  src={image + title + view + theme + '.jpg'}
                   id="Anim_tion"
                   className="contitem__img"
                   alt="image not found"

@@ -76,7 +76,7 @@ function App() {
       <Container>
         <ProjectList>
           <ThemeContext.Provider value={theme}>
-            <ProjectItem data={projects}/>
+            <ProjectItem data={projects} Context={ThemeContext}/>
           </ThemeContext.Provider>
         </ProjectList>
       </Container>
