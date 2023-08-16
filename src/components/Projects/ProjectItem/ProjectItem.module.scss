@@ -11,66 +11,10 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
   }
-  &__imgCont {
-    --border: 2.5px; /* the border width */
-    --slant: 3em; /* control the slanted corners */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 300px;
+  &__descrp{
     font-family: "Michroma", sans-serif;
-    color: var(--accent-color);
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
 
-    color: var(--accent-color);
-    background: linear-gradient(
-          to bottom left,
-          var(--button-color) 50%,
-          #0000 50.1%
-        )
-        top right,
-      linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%) bottom
-        left;
-    background-size: calc(var(--slant) + 1.3 * var(--border))
-      calc(var(--slant) + 1.3 * var(--border));
-    background-repeat: no-repeat;
-    box-shadow: 0 0 0 200px inset var(--s, #0000),
-      0 0 0 var(--border) inset var(--button-color);
-    clip-path: polygon(
-      0 0,
-      calc(100% - var(--slant)) 0,
-      100% var(--slant),
-      100% 100%,
-      var(--slant) 100%,
-      0 calc(100% - var(--slant))
-    );
-    transition: color var(--t, 0.3s), background-size 0.3s;
-  }
-  &__img {
-    --slant: 4.1em; /* control the slanted corners */
-    width: auto;
-    max-width: 520px;
-    min-height: 100px;
-    padding: 15px;
-    background-size: calc(var(--slant) + 1.3 * var(--border))
-      calc(var(--slant) + 1.3 * var(--border));
-    background-repeat: no-repeat;
-    clip-path: polygon(
-      0 0,
-      calc(100% - var(--slant)) 0,
-      100% var(--slant),
-      100% 100%,
-      var(--slant) 100%,
-      0 calc(100% - var(--slant))
-    );
-  }
-
-  &__descrp {
-    font-family: "Michroma", sans-serif;
   }
   &__description {
     font-family: "Michroma", sans-serif;
@@ -83,7 +27,10 @@ li {
 }
 .descrp {
   &__title {
+    font-family: "Michroma", sans-serif;
+    font-weight: 200;
     font-size: 40px;
+    margin: 0 auto;
   }
 }
 .numberitem {
@@ -143,9 +90,6 @@ li {
     0 calc(100% - var(--slant))
   );
   transition: color var(--t, 0.3s), background-size 0.3s;
-  .linkhover {
-    color: var(--text-contrast);
-  }
 }
 #linkhover {
   text-decoration: none;
@@ -159,11 +103,8 @@ li {
 .button:hover,
 .button:active {
   background-size: 100% 100%;
-  color: #000000;
+  color: var(--text-color-c);
   --t: 0.2s 0.1s;
-  .linkhover {
-    color: var(--text-color-c);
-  }
 }
 .button:active {
   --s: #0005;

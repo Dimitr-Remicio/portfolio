@@ -2,18 +2,14 @@
 @import-normalize; /* bring in normalize.css styles */
 
 // @import './aditional/colors.css';
-.root{
+#root{
 
-  display: block;
-  display: flex;
-  flex-direction: column;
-
+  background-image: var(--root-bg);
+  background-position: 50%;
+  background-repeat: repeat-y;
+  background-size: contain;
 
 }
-
-
-
-
 
 html{
   background-color: var(--background-color);
@@ -47,7 +43,14 @@ h2{
 
   color: var(--text-color);
 }
-
+p{
+  font-family: "Michroma", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 1px;
+  // word-spacing: 10px;
+  line-height: 2.5em;
+}
 button {
   --border: 2.5px;    /* the border width */
   --slant: 0.5em;   /* control the slanted corners */
@@ -57,7 +60,7 @@ button {
   font-size: 18px;
   width: 130px;
   height: 40px;
-  padding: 0.2em 1.2em;
+  padding: 0.1em 1.0em;
   border: none;
   cursor: pointer;
   
@@ -91,11 +94,8 @@ button:focus-visible {
 button:hover,
 button:active{
   background-size: 100% 100%;
-  color: #000000;
   --t: 0.2s 0.1s;
-  .linkhover{
   color: var(--text-color-c);
-  }
 }
 button:active {
   --s: #0005;
@@ -105,7 +105,7 @@ button:active {
 
 .shadowHome{
   width: 100vw;
-  height: 50%;
+  height: 90%;
 
   position: absolute;
   left: 0;
@@ -113,19 +113,19 @@ button:active {
   transform: translate(0%,40%);
   z-index: 12 ;
 
-  background: linear-gradient(0deg, var(--background-color-20) 15%, var(--background-color) 40%,  var(--background-color) 50%, var(--background-color-20) 100% );
+  background: linear-gradient(0deg, var(--background-color-20) 0%, var(--background-color) 40%,  var(--background-color) 50%, var(--background-color-20) 80% );
 }
 
 
 
 .blob{
   background-color: var(--accent-color);
-  height: 30vmax;
+  height: 25vmax;
   aspect-ratio: 1;
   // width: 500px;    
   position: relative;
-  left: 70%;
-  top: 20%;
+  // left: 50%;
+  // top: 50%;
   transform:translate(-50%,-50%);
   border-radius: 50%;
   animation: rotate 20s infinite;
@@ -138,8 +138,8 @@ button:active {
 
   position: absolute;
   z-index: 1;
-  backdrop-filter: blur(18vmax);   
-  -webkit-backdrop-filter: blur(18vmax);   
+  backdrop-filter: blur(15vmax);   
+  -webkit-backdrop-filter: blur(15vmax);   
 }
 
 

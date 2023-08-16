@@ -1,4 +1,38 @@
 .aboutcont{
     min-width: 1500px;
-    margin: 10% auto;
+    margin: 5% auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img{
+        width: 500px;
+        height: 680px;
+        
+        padding: 15px;
+        
+        object-fit: cover;
+
+
+        filter: blur(0.2vw);
+        filter: grayscale(5);
+        transition: all 400ms;
+        &:hover{
+            transition: all 200ms;
+            transform: scale(1.01);
+            filter: blur(0);
+
+        }
+    }
 }
+
+.About{
+    &__paragr{
+        width: 100%;
+        max-width: 890px;
+        font-size: 17px;
+    }
+}
+
+

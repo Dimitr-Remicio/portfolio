@@ -100,7 +100,7 @@
     flex-direction: column;
     align-items: flex-end;
 
-    padding: 10% 0% 0% 0%;
+    padding: 5% 0% 0% 0%;
   }
   
   #About{
@@ -110,12 +110,197 @@
     flex-direction: column;
     align-items: flex-end;
     
-    padding: 10% 0% 0% 0%;
+    padding: 5% 0% 0% 0%;
   }
+  
+  
+  
+  .contitem{
+    width: 100%;
+    transition: all 800ms;
 
+    &__imgCont {
+    --border: 2.5px; /* the border width */
+    --slant: 3em; /* control the slanted corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    font-family: "Michroma", sans-serif;
+    color: var(--accent-color);
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
 
+    color: var(--accent-color);
+    background: linear-gradient(
+          to bottom left,
+          var(--button-color) 50%,
+          #0000 50.1%
+        )
+        top right,
+      linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%) bottom
+        left;
+    background-size: calc(var(--slant) + 1.3 * var(--border))
+      calc(var(--slant) + 1.3 * var(--border));
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 200px inset var(--s, #0000),
+      0 0 0 var(--border) inset var(--button-color);
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--slant)) 0,
+      100% var(--slant),
+      100% 100%,
+      var(--slant) 100%,
+      0 calc(100% - var(--slant))
+    );
 
+    .buttonimage{
+      display: none;
+      transition: all 400ms ;
+    }
+    &:hover{
+      .contitem__img{
+        transition: all 400ms ;
+        filter: brightness(2) grayscale(0.51) opacity(0.1) contrast(0.8) saturate(1.2);
+      }
+      .buttonimage{
+        transition: all 400ms ;
+        display: flex;
+      }
+      
+      .buttonimage:focus-visible {
+        transition: all 300ms ;
+        outline-offset: calc(-1 * var(--border));
+        outline: var(--border) solid #000c;
+        clip-path: none;
+        background-size: 0 0;
+      }
+      .buttonimage:hover,
+      .buttonimage:active{
+        transition: all 300ms;
+        background-size: 100% 100%;
+        --t: 0.2s 0.1s;
+        color: var(--text-color-c);
+      }
+      .buttonimage:active {
+        --s: #0005;
+        transition: none;
+      }
+      
+    }
+      
+    }
+    &__img {
+      --slant: 4.1em; /* control the slanted corners */
+      width: auto;
+      max-width: 600px;
+    min-height: 100px;
+    padding: 15px;
+    background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+    background-repeat: no-repeat;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--slant)) 0,
+      100% var(--slant),
+      100% 100%,
+      var(--slant) 100%,
+      0 calc(100% - var(--slant))
+    );
+    transition: all 800ms;
 
+    
+  }
+}
 
+.imagebutton{
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+}
+
+.imgCont {
+  --border: 2.5px; /* the border width */
+  --slant: 3em; /* control the slanted corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  font-family: "Michroma", sans-serif;
+  color: var(--accent-color);
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+
+  color: var(--accent-color);
+  background: linear-gradient(
+        to bottom left,
+        var(--button-color) 50%,
+        #0000 50.1%
+      )
+      top right,
+    linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%) bottom
+      left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 200px inset var(--s, #0000),
+    0 0 0 var(--border) inset var(--button-color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+}
+.buttonimage {
+  --border: 2.5px; /* the border width */
+  --slant: 0.8em; /* control the slanted corners */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Michroma", sans-serif;
+  color: var(--accent-color);
+  font-size: 17px;
+  height: 40px;
+  padding: 0.3em 1.9em;
+  border: none;
+  cursor: pointer;
+
+  color: var(--accent-color);
+  background: linear-gradient(
+        to bottom left,
+        var(--button-color) 50%,
+        #0000 50.1%
+      )
+      top right,
+    linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%) bottom
+      left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 200px inset var(--s, #0000),
+    0 0 0 var(--border) inset var(--button-color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+  transition: color var(--t, 0.3s), background-size 0.3s;
+
+}
 

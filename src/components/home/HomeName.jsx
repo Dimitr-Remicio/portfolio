@@ -1,12 +1,11 @@
-import { useEffect, useRef, useContext  } from "react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import s from "./Home.module.scss";
 
 
 
-const Home = ({contain}) => {
+const Home = () => {
   const el = useRef(null);
-  const color = useContext(contain);
 
 
   useEffect(() => {

@@ -64,6 +64,7 @@ function App() {
           </defs>
         </svg>
       </div>
+      
       <Dark toggle={toggleTheme} onClick={toggleTheme} />
       <Container>
           <>

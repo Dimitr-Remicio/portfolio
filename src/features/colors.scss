@@ -3,7 +3,7 @@
   --background-color-20: #f5f4f400;
   --title-color:#E6EDEF;
   --text-color:#000000;
-  --text-color-c:#f5f4f4;
+  --text-color-c:#ffffff;
   --text-contrast:#000000;
   
   --arrow: #000000;
@@ -20,9 +20,10 @@
 
 
   --bg-pattern: url(/src/assets/images/bgWhite.png);
+  --root-bg:url(src/assets/images/rootbgw.png);
 }
 .dark {
-  --background-color: #040404;
+  --background-color: #161616;
   --background-color-20: #04040400;
   --title-color:#000000;
   --text-color:#fcfcfc;
@@ -35,12 +36,13 @@
   --icon-fill-hdr-h: #A0FF90;
   --stroke-icon: #A0FF90;
   --stroke-icon-h: #000000;
-
+  
   
   --button-color:#A0FF90;
   --accent-color:#A0FF90;
   --typing-color:#A0FF90;
   --shadow-color:#a1ff908c;
-
+  
   --bg-pattern: url(/src/assets/images/bgDark.png);
+  --root-bg:url(src/assets/images/rootbgd.png);
 }

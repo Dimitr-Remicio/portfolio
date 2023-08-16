@@ -1,12 +1,10 @@
-
 import s from "./ProjectItem.module.scss";
 import sprite from "../../../features/sprite.svg";
+import Tilt from "react-parallax-tilt";
 
 const ProjectItem = ({ data }) => {
-  
-
-  return (
-    data.map(({ id, number, title, image, description, link, orientation }) => (
+  return data.map(
+    ({ id, number, title, image, description, link, orientation }) => (
       <li key={id} className={"contitem__" + orientation}>
         <div className={s.contitem__info}>
           <div className={s.contitem__descrp}>
@@ -23,9 +21,9 @@ const ProjectItem = ({ data }) => {
                 {number}
               </div>
             </div>
-            <p className={s.descrp__title} id="Anim_tion">
+            <h4 className={s.descrp__title} id="Anim_tion">
               {title}
-            </p>
+            </h4>
           </div>
           <div className={s.contitem__description} id="Anim_tion">
             {description}
@@ -42,20 +40,54 @@ const ProjectItem = ({ data }) => {
             </a>
           </div>
         </div>
-        <div className={s.contitem__imgCont} id="Anim_tion">
-          {image.length > 0 ? (
-            <img
-              src={image}
-              id="Anim_tion"
-              className={s.contitem__img}
-              alt="image not found"
-            />
-          ) : (
-            <p className={s.notfound}>image not found</p>
-          )}
-        </div>
+        <Tilt
+          tiltMaxAngleX={10}
+          tiltMaxAngleY={10}
+          perspective={1800}
+          scale={1.02}
+          transitionSpeed={2000}
+          gyroscope={true}
+        >
+          <div className="contitem__imgCont" id="Anim_tion">
+            {image.length > 0 ? (
+              <Tilt
+                tiltMaxAngleX={5}
+                tiltMaxAngleY={5}
+                perspective={2000}
+                scale={1.001}
+                transitionSpeed={2000}
+                // gyroscope={true}
+                glareEnable={true}
+                glareMaxOpacity={0.5}
+                glareColor="#ffffff"
+                glarePosition="bottom"
+                glareBorderRadius="10px"
+              >
+                <img
+                  src={image}
+                  id="Anim_tion"
+                  className="contitem__img"
+                  alt="image not found"
+                />
+                <div id="Anim_tion" className="imagebutton">
+                  <a
+                    id="linkhover"
+                    className="buttonimage"
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View
+                  </a>
+                </div>
+              </Tilt>
+            ) : (
+              <p className={s.notfound}>image not found</p>
+            )}
+          </div>
+        </Tilt>
       </li>
-    ))
+    )
   );
 };
 
