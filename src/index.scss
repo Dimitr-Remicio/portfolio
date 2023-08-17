@@ -42,6 +42,8 @@ h2{
   margin: 0;
 
   color: var(--text-color);
+  transition: all 200ms;
+
 }
 p{
   font-family: "Michroma", sans-serif;
@@ -119,16 +121,21 @@ button:active {
 
 
 .blob{
-  background-color: var(--accent-color);
-  height: 25vmax;
+  background-color: var(--ball-color);
+  height: 30vmax;
   aspect-ratio: 1;
   // width: 500px;    
   position: relative;
-  // left: 50%;
-  // top: 50%;
-  transform:translate(-50%,-50%);
-  border-radius: 50%;
-  animation: rotate 20s infinite;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 20%;
+  animation: rotate 8s infinite;
+  // animation: 140ms in initial ;
+  animation-fill-mode: both;
+  animation-delay: 0 ;
+
+  transition: 800ms;
 }
 .blur{
   height: 100vh;
@@ -138,13 +145,34 @@ button:active {
 
   position: absolute;
   z-index: 1;
-  backdrop-filter: blur(15vmax);   
-  -webkit-backdrop-filter: blur(15vmax);   
+  backdrop-filter: blur(11vmax);   
+  -webkit-backdrop-filter: blur(11vmax);   
+
 }
 
 
 
+@keyframes shadee {
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
 
+}
+@keyframes rotate {
+  from{
+      rotate: 0deg;
+  }
+  50%{
+    scale: 1 1.5;
+  }
+  to{
+      rotate: 360deg;
+  }
+
+}
 
 
 @keyframes show {

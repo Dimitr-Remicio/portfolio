@@ -13,4 +13,4 @@ document.onpointermove = (e) => {
     { duration: 2000, fill: "forwards" }
   );
 
-};}, 2000);
+};}, 500);

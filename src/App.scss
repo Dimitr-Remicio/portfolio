@@ -1,4 +1,5 @@
 
+@import './ParallaxEffect.demozap.scss';
 
 
 .contitem__left{
@@ -210,8 +211,42 @@
     );
     transition: all 800ms;
 
+
+  }
+}
+.imgAbout{
+  width: 400px;
+  height: 580px;
+  
+  padding: 15px;
+  
+  object-fit: cover;
+  image-resolution: crisp-edges;
+
+  filter: blur(0.2vw);
+  filter: grayscale(0.8);
+  transition: all 400ms;
+  &:hover{
+      transition: all 200ms;
+      transform: scale(1.01);
+      filter: blur(0);
+    }
+ 
     
   }
+  
+.textJpans{
+  display: flex;
+
+  position: absolute;
+  top: 0;
+  left: 1em;
+  margin: 1em;
+
+  color: var(--black);
+
+  font-family: 'Dela Gothic One';
+  font-size: 1.1em;
 }
 
 .imagebutton{
@@ -304,3 +339,21 @@
 
 }
 
+.svgBodyleft{
+  // stroke: var(--text-color);
+  fill: var(--background-color);
+}
+.svgBodyright{
+  fill: var(--background-color);
+  transform: translate(0%,-5%);
+}
+.contsvgpage{
+  position: absolute;
+  top: 70%;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;    
+}

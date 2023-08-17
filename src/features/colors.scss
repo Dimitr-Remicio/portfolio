@@ -1,26 +1,30 @@
 .light {
   --background-color: #f5f4f4;
   --background-color-20: #f5f4f400;
-  --title-color:#E6EDEF;
+  --title-color:#343434;
   --text-color:#000000;
   --text-color-c:#ffffff;
   --text-contrast:#000000;
   
   --arrow: #000000;
-  --arrow-hover: #230bff91;
+  --arrow-hover: #3652dd;
   --icon-fill-hdr: #00000000;
   --stroke-icon: #000000;
-  --icon-fill-hdr-h: #230bff91;
+  --icon-fill-hdr-h: #3652dd;
   --stroke-icon-h: #f5f4f4;
 
-  --accent-color:#230bff;
-  --shadow-color:#0a005f7e;
-  --typing-color:#0a005f;
-  --button-color:#230bff;
+  --ball-color:#3652dd82;
+  --accent-color:#3652dd;
+  --shadow-color:#cbd3ff54;
+  --typing-color:#000000;
+  --button-color:#3652dd;
 
 
-  --bg-pattern: url(/public/assets/images/bgwhite.png);
-  --root-bg:url(/public/assets/images/rootbgw.png);
+  --white:#ffffff;
+  --black:#000000;
+  
+  --bg-pattern: url(/assets/images/bgwhite.png);
+  --root-bg:url(/assets/images/rootbgw.png);
 }
 .dark {
   --background-color: #161616;
@@ -38,10 +42,16 @@
   --stroke-icon-h: #000000;
   
   
+  --ball-color:#a1ff908e;
   --button-color:#A0FF90;
   --accent-color:#A0FF90;
   --typing-color:#A0FF90;
   --shadow-color:#a1ff908c;
+  
+  --white:#ffffff;
+  
+  --black:#000000;
+  
   
   --bg-pattern: url(/public/assets/images/bgdark.png);
   --root-bg:url(/public/assets/images/rootbgd.png);

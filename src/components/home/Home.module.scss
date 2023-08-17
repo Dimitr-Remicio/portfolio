@@ -51,8 +51,12 @@
     margin-left: 1em;
     animation: 1450ms flash infinite ;
     animation-fill-mode: both;
+    transition: all 800ms;
     
 }
+
+
+
 @keyframes flash {
     0%{
         opacity: 0;
@@ -94,8 +98,8 @@
     letter-spacing: 5px;
     
     color: var(--title-color);
-    -webkit-text-stroke: 0.8px var(--accent-color);
-    text-shadow: 0 0px 12px var(--shadow-color);
+    -webkit-text-stroke: 0.8px var(--stroke-icon);
+    text-shadow: 0px 0px 10px var(--shadow-color);
         margin: 0;
     }
     &__h3{
@@ -106,8 +110,10 @@
         margin: 0;
         
         color: var(--text-color);
+        transition: all 800ms;
     }
     &__p{
+        transition: all 800ms;
         
         font-family: 'Michroma', sans-serif;       
         color: var(--text-color);      

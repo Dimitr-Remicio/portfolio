@@ -1,9 +1,9 @@
 import '../../features/colors.scss';
 import PropTypes from 'prop-types';
 
-import sprite from '../../features/sprite.svg'
+import sprite from '../../features/sprite.svg';
 
-import style from '../../features/toogle.module.scss'
+import style from '../../features/toogle.module.scss';
 import './arrow.scss';
 
 

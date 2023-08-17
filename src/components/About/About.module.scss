@@ -1,38 +1,44 @@
 .aboutcont{
-    min-width: 1500px;
+    min-width: 1300px; 
+
     margin: 5% auto;
     
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    img{
-        width: 500px;
-        height: 680px;
+   
+}
+.description{
+
+        max-width: 750px;
+        width: 100%;
+        transition: all 800ms;
         
-        padding: 15px;
-        
-        object-fit: cover;
-
-
-        filter: blur(0.2vw);
-        filter: grayscale(5);
-        transition: all 400ms;
-        &:hover{
-            transition: all 200ms;
-            transform: scale(1.01);
-            filter: blur(0);
-
+    }
+    .description:hover{
+        .name{
+            color: var(--accent-color);
+            transition: all 500ms;
+            stroke: var(--accent-color);
         }
     }
+
+    
+    .separator{
+        stroke: var(--text-color);
+    }
+    .About{
+        &__paragr{
+            width: 100%;
+            font-size: 16px;
+        }
+        
+    }
+    .name{
+    transition: all 500ms;
+
 }
 
-.About{
-    &__paragr{
-        width: 100%;
-        max-width: 890px;
-        font-size: 17px;
-    }
-}
 
 
