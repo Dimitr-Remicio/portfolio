@@ -1,0 +1,46 @@
+
+.Info{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 5% 0% 0% 0%;    
+}
+
+.Skillscont{
+    min-width: 1300px; 
+
+    margin: 5% auto;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+.list{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+
+    img{
+        height: 50px;
+    }
+}
+
+.icon{
+    width: 50px;
+}
+.iconhtml{
+    
+        width: auto;
+        stroke-width: 0;
+        fill: currentColor;
+}
