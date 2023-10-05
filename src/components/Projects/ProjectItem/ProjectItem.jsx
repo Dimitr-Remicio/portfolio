@@ -2,7 +2,7 @@ import s from "./ProjectItem.module.scss";
 import sprite from "../../../features/sprite.svg";
 import Tilt from "react-parallax-tilt";
 import { useContext } from 'react';
-
+import ProjectUsed from "./projectUsed";
 
 const ProjectItem = ({ data, Context }) => {
 
@@ -10,7 +10,7 @@ const ProjectItem = ({ data, Context }) => {
   const image = `/portfolio/assets/images/`;
 
   return data.map(
-    ({ id, number, name, title, description, link, orientation }) => (
+    ({ id, number, name, title, description, link, orientation, items }) => (
       <li key={id} className={"contitem__" + orientation}>
         <div className={s.contitem__info}>
           <div className={s.contitem__descrp}>
@@ -34,16 +34,8 @@ const ProjectItem = ({ data, Context }) => {
           <div className={s.contitem__description} id="Anim_tion">
             {description}
           </div>
-          <div id="Anim_tion" className="divbutton">
-            <a
-              id="linkhover"
-              className={s.button}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View
-            </a>
+          <div>
+            <ProjectUsed data={items}></ProjectUsed>
           </div>
         </div>
         <Tilt

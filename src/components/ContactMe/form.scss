@@ -1,0 +1,140 @@
+/* form starting stylings ------------------------------- */
+.group {
+
+    --border: 1px;    /* the border width */
+    --slant: 0.6em; 
+  position: relative;
+  margin-bottom: 1.38em;
+
+  & input{
+    
+    font-weight: 200;
+    font-size: 1em;
+    transition: 0.3s ease;
+    border: 2px solid #000000;
+    // background: linear-gradient(to bottom left, var(--button-color) 50%, rgba(0, 0, 0, 0) 50.1%) top right, linear-gradient(to top right, var(--button-color) 50%, rgba(0, 0, 0, 0) 50.1%) bottom left;
+    background-size: calc(var(--slant) - 0 * var(--border)) calc(var(--slant) + 1.5 * var(--border));
+    background-repeat: no-repeat;
+    // box-shadow: 0 0 0 200px inset var(--s, rgba(0, 0, 0, 0)), 0 0 0 var(--border) inset var(--button-color);
+    clip-path: polygon( 0.5em 0, calc(100% - 1em) 0, 100% 100%, 0.3em 100%, 0 100%, 0 0.2em );
+    transition: color var(--t, 0.3s), background-size 0.3s;
+}
+
+
+  & label{
+    font-family: "Michroma", sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+  }
+}
+.group input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border: 1px solid #000000;
+  background-color: #00000000;
+
+
+ 
+}
+.group input:focus {
+    outline: none;
+    background-color: var(--shadow-input);
+    transition: 0.2s;
+  }
+
+/* LABEL ======================================= */
+label {
+//   color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}

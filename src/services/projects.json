@@ -1,68 +1,77 @@
 [
-    {
-        "id":"1",
-        "number": "01",
-        "name": "yersi",
-        "title": "yersi",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image":"https://i.postimg.cc/qq8yvh8m/yersi-preview-dark.jpg",
-        "orientation":"right",
-        "link":"https://dimitr-remicio.github.io/Yersi/",
-        "inProcess":true
-    },
-    {
-        "id":"2",
-        "number": "02",
-        "name": "webstudio",
-        "title": "web-studio",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image":"https://i.postimg.cc/9MwysNzH/web-studio-preview-dark.png",
-        "orientation":"left",
-        "link":"https://dimitr-remicio.github.io/goit-markup-hw-08/",
-        "inProcess":false
-
-    },
-    {
-        "id":"3",
-        "number": "03",
-        "name": "icecream",
-        "title": "ice-cream",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image":"https://i.postimg.cc/7LWgsyHN/ice-cream-preview-dark.png",
-        "orientation":"right",
-        "link":"https://dimitr-remicio.github.io/iceCream2.0/",
-        "inProcess":false
-    },
-    {
-    "id":"4",
-    "number": "04",
-        "name": "barbershop",
-        "title": "barber-shop",
-        "image":"https://i.postimg.cc/26g76Ng5/barber-shop-preview-light.png",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "orientation":"left",
-        "link":"https://dimitr-remicio.github.io/BarberShop/"
-    },
-    {
-        "id":"5",
-        "number": "05",
-        "name": "filmoteka1",
-        "title": "filmoteka-1",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image":"https://i.postimg.cc/CLGsFt7F/filmoteka-1-preview-dark.png",
-        "orientation":"right",
-        "link":"https://dimitr-remicio.github.io/Filmoteka1/",
-        "inProcess":false
-    },
-    {
-        "id":"6",
-        "number": "06",
-        "name": "filmoteka2",
-        "title": "filmoteka-2",
-        "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
-        "image":"https://i.postimg.cc/R0F7L0BF/filmoteka-2-preview-light.png",
-        "orientation":"left",
-        "link":"https://dimitr-remicio.github.io/filmoteka2/",
-        "inProcess":false
+  {
+    "id": "1",
+    "number": "01",
+    "name": "yersi",
+    "title": "yersi",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "image": "https://i.postimg.cc/qq8yvh8m/yersi-preview-dark.jpg",
+    "orientation": "right",
+    "link": "https://dimitr-remicio.github.io/Yersi/",
+    "inProcess": true,
+    "items": {
+      "0": "html",
+      "1": "css",
+      "2": "javascript"
     }
+  },
+  {
+    "id": "2",
+    "number": "02",
+    "name": "webstudio",
+    "title": "web-studio",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "image": "https://i.postimg.cc/9MwysNzH/web-studio-preview-dark.png",
+    "orientation": "left",
+    "link": "https://dimitr-remicio.github.io/goit-markup-hw-08/",
+    "inProcess": false,
+    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+  },
+  {
+    "id": "3",
+    "number": "03",
+    "name": "icecream",
+    "title": "ice-cream",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "image": "https://i.postimg.cc/7LWgsyHN/ice-cream-preview-dark.png",
+    "orientation": "right",
+    "link": "https://dimitr-remicio.github.io/iceCream2.0/",
+    "inProcess": false,
+    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+  },
+  {
+    "id": "4",
+    "number": "04",
+    "name": "barbershop",
+    "title": "barber-shop",
+    "image": "https://i.postimg.cc/26g76Ng5/barber-shop-preview-light.png",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "orientation": "left",
+    "link": "https://dimitr-remicio.github.io/BarberShop/",
+    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+  },
+  {
+    "id": "5",
+    "number": "05",
+    "name": "filmoteka1",
+    "title": "filmoteka-1",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "image": "https://i.postimg.cc/CLGsFt7F/filmoteka-1-preview-dark.png",
+    "orientation": "right",
+    "link": "https://dimitr-remicio.github.io/Filmoteka1/",
+    "inProcess": false,
+    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+  },
+  {
+    "id": "6",
+    "number": "06",
+    "name": "filmoteka2",
+    "title": "filmoteka-2",
+    "description": "Lorem ipsum dolor sit amet consectetur. Amet bibendum sed elementum sed. Morbi orci tortor condimentum morbi nunc.",
+    "image": "https://i.postimg.cc/R0F7L0BF/filmoteka-2-preview-light.png",
+    "orientation": "left",
+    "link": "https://dimitr-remicio.github.io/filmoteka2/",
+    "inProcess": false,
+    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+  }
 ]

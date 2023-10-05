@@ -1,0 +1,53 @@
+.button {
+    --border: 2.5px;    /* the border width */
+    --slant: 0.6em;   /* control the slanted corners */
+  
+    font-family: 'Michroma', sans-serif;
+    color: var(--text-color-c);
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    padding: 0.1em 1.0em;
+    border: none;
+    cursor: pointer;
+    
+    // color: var(--accent-color);
+    background: 
+       linear-gradient(to bottom left,var(--button-color)  50%,#00000000 50%) top right,
+       linear-gradient(to top   right,var(--button-color)  50%,#00000000 50%) bottom left;
+    background-size: calc(var(--slant) + 110*var(--border)) calc(var(--slant) + 20*var(--border));
+    background-repeat: no-repeat;
+
+    box-shadow:
+      0 0 0 0px inset var(--s,#d2d2d276),
+      0 0 0 var(--border) inset var(--button-color);
+
+    clip-path: 
+        polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+                100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+               );
+    transition: color var(--t,0.3s), background-size 0.3s;
+    .linkhover{
+      color: var(--text-contrast);
+    }
+  }
+  .linkhover{
+    text-decoration: none;  
+  }
+  .button:focus-visible {
+    outline-offset: calc(5*var(--border));
+    outline: var(--border) solid rgb(255, 255, 255);
+    clip-path: none;
+    background-size: 0 0;
+  }
+  .button:hover,
+  .button:active{
+    background-repeat: no-repeat;
+    background-size: 7% 25%;
+    --t: 0.2s 0.1s;
+    color: var(--text-color);
+  }
+  .button:active {
+    --s: #0005;
+    transition: none;
+  }

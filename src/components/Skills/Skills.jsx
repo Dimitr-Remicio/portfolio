@@ -11,13 +11,13 @@ const Skills = () => {
           <div>
             <svg className={s.iconhtml}
             viewBox="0 0 32 32" width="80">
-              <use href={sprite + "#icon-html5"}></use>
+              <use href={sprite + "#icon-html"}></use>
             </svg>
           </div>
           <div>
             <svg className={s.iconhtml}
             viewBox="0 0 32 35" width="80">
-              <use href={sprite + "#icon-css3"}></use>
+              <use href={sprite + "#icon-css"}></use>
             </svg>
           </div>
           <div>

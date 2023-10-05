@@ -1,3 +1,73 @@
 @import url('https://fonts.cdnfonts.com/css/aroma');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Sans+JP:wght@700');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One');
+
+@font-face {
+    font-family: 'Conquera Bold';
+    src: url('Conquera-Bold.eot');
+    src: local('Conquera Bold'), local('Conquera-Bold'),
+        url('/assets/fonts/Conquera-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Bold.woff') format('woff'),
+        url('/assets/fonts/Conquera-Bold.eot') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+    @font-face {
+
+    font-family: 'Conquera Medium';
+    src: url('Conquera-Medium.eot');
+    src: local('Conquera Medium'), local('Conquera-Medium'),
+        url('/assets/fonts/Conquera-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Medium.woff') format('woff'),
+        url('/assets/fonts/Conquera-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conquera Heavy';
+    src: url('Conquera-Heavy.eot');
+    src: local('Conquera Heavy'), local('Conquera-Heavy'),
+        url('/assets/fonts/Conquera-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Heavy.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Heavy.woff') format('woff'),
+        url('/assets/fonts/Conquera-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conquera Fine';
+    src: url('Conquera-Fine.eot');
+    src: local('Conquera Fine'), local('Conquera-Fine'),
+        url('/assets/fonts/Conquera-Fine.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Fine.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Fine.woff') format('woff'),
+        url('/assets/fonts/Conquera-Fine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Conquera';
+    src: url('Conquera-Light.eot');
+    src: local('Conquera Light'), local('Conquera-Light'),
+        url('/assets/fonts/Conquera-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Light.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Light.woff') format('woff'),
+        url('/assets/fonts/Conquera-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conquera Inline';
+    src: url('Conquera-Inline.eot');
+    src: local('Conquera Inline'), local('Conquera-Inline'),
+        url('/assets/fonts/Conquera-Inline.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Conquera-Inline.woff2') format('woff2'),
+        url('/assets/fonts/Conquera-Inline.woff') format('woff'),
+        url('/assets/fonts/Conquera-Inline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

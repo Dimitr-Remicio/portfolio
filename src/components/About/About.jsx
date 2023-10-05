@@ -12,7 +12,7 @@ const About = () => {
         <div className={s.aboutcont}>
           <div className={s.description}>
             <p className={s.About__paragr}>
-              Hola, soy {""} 
+              Hola, soy {""}
               <b className={s.name}>Dimitr Remicio</b>
               <br />
               <br />
@@ -20,17 +20,17 @@ const About = () => {
               nuevas tecnologías, seguir desafiándome y lograr un gran impacto.
               <br />
               <svg
-              className={s.separator}
-              // viewBox="2 3 300 10"
-              viewBox="0 -25 700 50"
-              width="100%"
-              height="auto"
-            >
-              <use
-                className={s.name}
-                href={sprite + "#lines-separator"}
-              ></use>
-            </svg>
+                className={s.separator}
+                // viewBox="2 3 300 10"
+                viewBox="0 -25 700 50"
+                width="100%"
+                height="auto"
+              >
+                <use
+                  className={s.name}
+                  href={sprite + "#lines-separator"}
+                ></use>
+              </svg>
               <br />
               Me destaco en el desarrollo Front-end. sin embargo, me apasiona el
               realizar diseño. Dado que producir un sitio web moderno requiere
@@ -40,9 +40,7 @@ const About = () => {
               usuario óptimas.
             </p>
             <br />
-           
-           
-          </div>
+          </div>  
           <Tilt
             tiltMaxAngleX={10}
             tiltMaxAngleY={10}
@@ -68,13 +66,10 @@ const About = () => {
                 <img
                   src={image}
                   alt=""
-                  className="contitem__img imgAbout"
+                  className="contitem__imga imgAbout"
                   id="Anim_tion"
-                >
-                </img>
-                    <p className='textJpans'>
-                    プログラマー
-                      </p>
+                ></img>
+                <p className="textJpans">プログラマー</p>
               </Tilt>
             </div>
           </Tilt>

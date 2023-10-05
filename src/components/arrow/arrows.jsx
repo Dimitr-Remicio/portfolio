@@ -47,7 +47,7 @@ function Dark() {
         </div>
         
       </div>
-
+{/* 
       <div className="header-top">
         <div className={`Dark `} id="Darkbutton">
           <div style={style}>
@@ -55,7 +55,7 @@ function Dark() {
           </div>
         </div>
         <div className="content_header-top"></div>
-      </div>
+      </div> */}
     </>
   );
 }
