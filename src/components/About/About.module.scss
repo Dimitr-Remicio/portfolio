@@ -7,6 +7,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  align-items: center;
+
 }
 .description {
   width: auto;
@@ -38,13 +41,15 @@
 
 @media screen and (min-width: 1200px) {
   .aboutcont {
-    min-width: 1300px;
+    width: auto;
 
     margin: 10% auto;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
   }
   .description {
     max-width: 750px;

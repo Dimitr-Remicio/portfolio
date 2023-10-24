@@ -2,7 +2,7 @@ import s from "./About.module.scss";
 import Tilt from "react-parallax-tilt";
 import sprite from "../../features/sprite.svg";
 
-import image from "/assets/images/imagemeee.jpg";
+import image from "/assets/images/meimage2.jpg";
 
 const About = () => {
   return (
@@ -54,7 +54,7 @@ const About = () => {
                 tiltMaxAngleX={5}
                 tiltMaxAngleY={5}
                 perspective={2000}
-                scale={1.001}
+                scale={1.000}
                 transitionSpeed={2000}
                 // gyroscope={true}
                 glareEnable={true}

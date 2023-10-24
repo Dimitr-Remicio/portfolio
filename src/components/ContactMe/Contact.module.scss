@@ -3,6 +3,7 @@
 .div{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .left{
@@ -102,6 +103,8 @@
 .div{
     display: flex;
     gap: 30px;
+    flex-wrap: nowrap;
+
 }
 
 .left{

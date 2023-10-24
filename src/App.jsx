@@ -18,7 +18,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Dark from "./components/arrow/arrows";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const ThemeContext = createContext(null);
 

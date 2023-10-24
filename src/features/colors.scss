@@ -1,9 +1,13 @@
 .light {
   --background-color: #f5f4f4;
+  --bg-tag: #F0F0F0;
   --background-color-20: #f5f4f400;
   --title-color:#343434;
   --text-color:#000000;
+  
   --text-color-50:#0000006d;
+  --text-color-80:#0000009a;
+
   --text-color-c:#ffffff;
   --text-contrast:#000000;
   
@@ -11,29 +15,35 @@
   --arrow-hover: #3652dd;
   --icon-fill-hdr: #00000000;
   --stroke-icon: #000000;
+  --border-form: #000000;
   --icon-fill-hdr-h: #3652dd;
   --stroke-icon-h: #f5f4f4;
-
+  
   --ball-color:#3652dd82;
   --accent-color:#3652dd;
   --shadow-color:#cbd3ff54;
   --typing-color:#000000;
   --button-color:#3652dd;
   --shadow-input:#dad9d950;
-
+  
 
   --white:#ffffff;
   --black:#000000;
+  --black-c:#0091ff;
   
   --bg-pattern: url(/assets/images/bgwhite.png);
   --root-bg:url(/assets/images/rootbgw.png);
 }
 .dark {
-  --background-color: #161616;
+  --background-color: #181818;
+  --bg-tag: #121312;
   --background-color-20: #04040400;
   --title-color:#000000;
   --text-color:#ffffff;
+
   --text-color-50:#ffffff6d;
+  --text-color-80:#ffffffa3;
+  
   --text-color-c:#000000;
   --text-contrast:#ffffff;
   
@@ -42,6 +52,7 @@
   --icon-fill-hdr: #ffffff00;
   --icon-fill-hdr-h: #A0FF90;
   --stroke-icon: #A0FF90;
+  --border-form: #a1ff908c;
   --stroke-icon-h: #000000;
   
   
@@ -55,6 +66,7 @@
   --white:#ffffff;
   
   --black:#000000;
+  --black-c:#eda202;
   
   
   --bg-pattern: url(/assets/images/bgdark.png);

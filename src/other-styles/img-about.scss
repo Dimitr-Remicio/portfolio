@@ -6,6 +6,7 @@
         --border: 2.5px; /* the border width */
         --slant: 5.5em; /* control the slanted corners */
         display: flex;
+
         align-items: center;
         justify-content: center;
         min-width: 300px;
@@ -75,10 +76,10 @@
           
         }
         &__imga {
-          --slant: 3.6em; /* control the slanted corners */
+          --slant: 2em; /* control the slanted corners */
           width: auto;
-          max-width: 85vw;
-        min-height: 100px;
+        min-height: 400px;
+        max-height: 500px;
         padding: 10px;
         background-size: calc(var(--slant) + 1.3 * var(--border))
         calc(var(--slant) + 1.3 * var(--border));
@@ -104,12 +105,16 @@
 
 .imgAbout {
   width: 100%;
-  height: 580px;
+  // height: 350px;
 
-  padding: 11px 12px 5px 10px;
+  // padding: 15px 10px 15px 1px;
+  padding: 0px;
+
+  margin: 0 auto;
 
   object-fit: cover;
   image-resolution: crisp-edges;
+
 
 //   filter: blur(0.2vw);
 //   filter: grayscale(0.8);
@@ -123,16 +128,17 @@
 
 .textJpans {
   display: flex;
-
+  transform: rotate(90deg);
+  translate: -60%;
   position: absolute;
-  top: 0;
+  top: 1em;
   left: 1em;
   margin: 1em;
 
   color: var(--black);
 
   font-family: "Dela Gothic One";
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .imagebutton {
@@ -149,11 +155,14 @@
 
 .imgCont {
   --border: 2.5px; /* the border width */
-  --slant: 3em; /* control the slanted corners */
+  --slant: 2.5em; /* control the slanted corners */
+  max-width: 500px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 300px;
+  padding: 10px;
+  margin:0 auto;
   font-family: "Michroma", sans-serif;
   color: var(--accent-color);
   font-size: 18px;
@@ -225,23 +234,27 @@
 
 @media screen and (min-width: 1200px) {
   .imgAbout {
-    max-width: 90vw;
 
     width: 100%;
-    height: 580px;
-
-    padding: 15px;
+    height: 100%;
+    max-height: 550px;
+    min-width: 500px;
 
     object-fit: cover;
     image-resolution: crisp-edges;
 
-    filter: blur(0.2vw);
-    filter: grayscale(0.8);
-    transition: all 400ms;
+    // filter: blur(0.2vw);
+    // filter: grayscale(0.1);
+    filter: opacity(20%) saturate(0%) contrast(20%) invert(60%);  
+    transition: all 400ms ease;
     &:hover {
       transition: all 200ms;
       transform: scale(1.01);
-      filter: blur(0);
+      filter: opacity(100%) saturate(100%) contrast(100%) invert(0%);  
+    }
+    &:hover ~ .textJpans{
+      color: var(--black);
+
     }
   }
 
@@ -249,14 +262,21 @@
     display: flex;
 
     position: absolute;
+    transform: rotate(0deg);
+    translate: 0;
+    top: 1em;
     top: 0;
     left: 1em;
     margin: 1em;
 
-    color: var(--black);
-
+    color: var(--black-c);
+    
     font-family: "Dela Gothic One";
     font-size: 1.1em;
+
+    &:hover{
+      color: var(--black);
+    }
   }
 
   .imagebutton {
@@ -273,11 +293,12 @@
 
   .imgCont {
     --border: 2.5px; /* the border width */
-    --slant: 3em; /* control the slanted corners */
+    --slant: 2.4em; /* control the slanted corners */
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 300px;
+    padding: 15px;
     font-family: "Michroma", sans-serif;
     color: var(--accent-color);
     font-size: 18px;

@@ -7,9 +7,9 @@
 
 #root {
   background-image: var(--root-bg);
-  background-position: 50%;
+  background-position: 60%;
   background-repeat: repeat-y;
-  background-size: contain;
+  background-size: 300%;
 }
 
 html {
@@ -20,6 +20,7 @@ a {
 }
 body {
   margin: 0;
+  width: 100vw;
   height: auto;
   overflow-x: hidden;
 
@@ -159,7 +160,7 @@ button:active {
 }
 .blur {
   width: 100vw;
-  height: 80vh;
+  height: 100%;
   left: 0;
   top: 0;
 
@@ -190,7 +191,9 @@ button:active {
 }
 
 @media screen and (min-width: 1200px) {
-
+  #root {
+    background-size: contain;
+  }
 
   h2{
   margin:0;

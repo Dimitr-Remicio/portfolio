@@ -1,0 +1,40 @@
+#html {
+  // background-color: #000;
+  cursor: pointer;
+  // background: radial-gradient(circle, #df4b3100 60%, #ff4d2d61 150%, #df4b31);
+  &:hover{
+    background: #00000000;
+  }
+}
+#css {
+  // background-color: #000;
+  cursor: pointer;
+  // background: radial-gradient(circle, #df4b3100 60%, #2393e85f 150%, #2274b3);
+  &:hover{
+    background: #00000000;
+  }
+}
+#javascript {
+  // background-color: #000;
+  cursor: pointer;
+  // background: radial-gradient(circle, #df4b3100 60%, #f6de4161 150%, #F6DE41);
+  &:hover{
+    background: #00000000;
+  }
+}
+#react {
+  // background-color: #000;
+  cursor: pointer;
+  // background: radial-gradient(circle, #df4b3100 60%, #6bdaf963 150%, #6BDBF9);
+  &:hover{
+    background: #00000000;
+  }
+}
+#node {
+  // background-color: #000;
+  cursor: pointer;
+  // background: radial-gradient(circle, #df4b3100 60%, #3b993d57 150%, #3B993C);
+  &:hover{
+    background: #00000000;
+  }
+}
