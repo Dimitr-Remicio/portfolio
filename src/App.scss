@@ -1,44 +1,167 @@
+@import "./ParallaxEffect.demozap.scss";
+@import "./other-styles/img-about.scss";
+@import "./other-styles/tags.scss";
 
-@import './ParallaxEffect.demozap.scss';
-@import './other-styles/img-about.scss';
-@import './other-styles/tags.scss';
+// .gradientAnimationlight{
+// }
 
-.contitem__left{
-  width: 100%;    
-  max-width: 90vw;
+.backgroundAnimatedark,
+.backgroundAnimatelight {
+  background-color: none;
+  transition: all 1000ms ease-out;
+
+  position: fixed;
+  left: -10rem;
+  top: -10rem;
+  height: 1000px;
+  width: 1000px;
+
+  margin: 0 auto;
+
+}
+.gradientAnimationdark {
+  background-color: rgba(42, 42, 42, 0.364);
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 15px 15px 15px 15px;
+
+  position: absolute;
+
+  --slant: 2.58em;
+  width: auto;
+  max-width: 100%;
+  min-height: 100px;
+  padding: 15px;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+}
+.gradientAnimationlight {
+  transition: all 1000ms ease-out;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  margin: 15px 15px 15px 15px;
+
+  position: absolute;
+
+  --slant: 2.58em;
+  width: auto;
+  max-width: 500px;
+  min-height: 100px;
+  padding: 15px;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+
+  &:hover {
+    background: linear-gradient(50deg, #b3ffab, #fcf2e0, #515afe);
+    // background-color: rgba(32, 30, 30, 0.797);
+    background-size: 150% 150% !important;
+    animation: gradient-animation 5s ease-in-out infinite alternate both;
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: right top;
+      }
+      50% {
+        background-position: left bottom;
+      }
+      100% {
+        background-position: right top;
+      }
+    }
+  }
+}
+
+
+@keyframes gradient {
+  0% {
+    transform: rotate(0deg);
+    background-position: 0% 50%;
+  }
+  20% {
+    transform: rotate(80deg);
+    background-position: 100% 50%;
+  }
+  50% {
+    transform: rotate(300deg);
+    background-position: 100% 50%;
+  }
+  100% {
+    transform: rotate(0deg);
+    background-position: 230% 50%;
+  }
+}
+
+
+.imagePreview {
+  position: absolute;
+  object-fit: contain;
+  opacity: 1;
+  transition-property: opacity;
+
+  left: -2rem;
+  right: 0;
+  top: -0.3rem;
+  bottom: 0;
+  filter: brightness(1.5) grayscale(0.5) opacity(0.1)
+  saturate(1.2);
+  width: auto;
+  height: 105%;
   
+}
+.contitem__left {
+  width: 100%;
+  max-width: 90vw;
+
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
   gap: 40px;
 
-  &.contitem__info{
+  &.contitem__info {
     align-items: flex-start;
   }
 }
 
-
-
-.contitem__right{
+.contitem__right {
   max-width: 90vw;
-  width: 100%;   
-  
-  
-  justify-content:center;
+  width: 100%;
+
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+
   gap: 40px;
-
 }
-
-
-
 
 .iconModeDark {
   position: fixed;
@@ -46,61 +169,58 @@
   top: 0;
   z-index: 200;
 
-  transform: translate(-35%,90%);
-
+  transform: translate(-35%, 90%);
 }
 .iconModeDark:hover {
   cursor: pointer;
-  .moon{
-    
-    transition: all 250ms  ease-in-out;
+  .moon {
+    transition: all 250ms ease-in-out;
     fill: var(--arrow-hover);
   }
-  
-  .linedarkmd{
-    transition: all 250ms  ease-in-out;
+
+  .linedarkmd {
+    transition: all 250ms ease-in-out;
     stroke: var(--arrow-hover);
   }
 }
 
-.linedarkmd{
+.linedarkmd {
   stroke: var(--arrow);
 }
-.moon{
+.moon {
   fill: var(--arrow);
 }
-.headericon{
-  fill:var(--icon-fill-hdr);
-  stroke:var(--stroke-icon);
-  stroke-width:2px;
-  transition: all 250ms ;
+.headericon {
+  fill: var(--icon-fill-hdr);
+  stroke: var(--stroke-icon);
+  stroke-width: 2px;
+  transition: all 250ms;
 }
-.headericon:hover{
-  fill:var(--icon-fill-hdr-h);
-  stroke:var(--stroke-icon-h);
+.headericon:hover {
+  fill: var(--icon-fill-hdr-h);
+  stroke: var(--stroke-icon-h);
   box-shadow: 0px 10px 10px unset var(--icon-fill-hdr-h);
-  stroke-width:1px;
-  transition: all 250ms ;
+  stroke-width: 1px;
+  transition: all 250ms;
 }
-
 
 .word {
   margin: auto;
   color: rgb(0, 0, 0);
-  font-family: 'Conquera';
+  font-family: "Conquera";
   font-weight: 800;
-  font-style: normal;  
-  
+  font-style: normal;
+
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-#text{
+#text {
   display: flex;
   align-items: center;
 
-  font-family: 'Conquera';
+  font-family: "Conquera";
   font-weight: 800;
-  font-style: normal;  
+  font-style: normal;
 
   font-size: 60px;
   letter-spacing: 5px;
@@ -109,12 +229,9 @@
   color: var(--title-color);
   -webkit-text-stroke: 0.8px var(--accent-color);
   text-shadow: 0 0px 12px var(--shadow-color);
-
 }
 
-
-
-#Projects{
+#Projects {
   z-index: 25;
 
   display: flex;
@@ -123,54 +240,44 @@
 
   padding: 5% 0% 0% 0%;
   margin: 20% auto;
-
 }
 
-#About{
+#About {
   z-index: 25;
-  
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
+
   padding: 5% 0% 0% 0%;
   margin: 30% auto;
-
 }
 
-#contact{
-
+#contact {
   margin: 30% auto;
 }
 
-
-
-
-
-.svgBodyleft{
-// stroke: var(--text-color);
-fill: var(--background-color);
+.svgBodyleft {
+  // stroke: var(--text-color);
+  fill: var(--background-color);
 }
-.svgBodyright{
-fill: var(--background-color);
-transform: translate(0%,-5%);
+.svgBodyright {
+  fill: var(--background-color);
+  transform: translate(0%, -5%);
 }
-.contsvgpage{
-position: absolute;
-top: 70%;
-margin: 0 auto;
-width: 90%;
-height: auto;
-display: flex;
-align-items: flex-start;
-justify-content: space-between;    
+.contsvgpage {
+  position: absolute;
+  top: 70%;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
-
-
 
 @media screen and (min-width: 1200px) {
-  .contitem__left{
+  .contitem__left {
     width: 80vw;
     max-width: 100%;
     display: flex;
@@ -179,88 +286,80 @@ justify-content: space-between;
     flex-wrap: nowrap;
 
     padding: 20px;
-    
+
     margin: 0 auto;
-    
   }
-  
-  
-  
-  .contitem__right{
+
+  .contitem__right {
     width: 80vw;
     max-width: 100%;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    
+
     padding: 20px;
     margin: 0 auto;
   }
-  
 
-  
-.iconModeDark {
+  .iconModeDark {
     position: fixed;
     right: 0;
     top: 0;
     z-index: 200;
 
-    transform: translate(-35%,90%);
-
-}
-.iconModeDark:hover {
+    transform: translate(-35%, 90%);
+  }
+  .iconModeDark:hover {
     cursor: pointer;
-    .moon{
-      
-      transition: all 250ms  ease-in-out;
+    .moon {
+      transition: all 250ms ease-in-out;
       fill: var(--arrow-hover);
     }
-    
-    .linedarkmd{
-      transition: all 250ms  ease-in-out;
+
+    .linedarkmd {
+      transition: all 250ms ease-in-out;
       stroke: var(--arrow-hover);
     }
   }
-  
-  .linedarkmd{
+
+  .linedarkmd {
     stroke: var(--arrow);
   }
-  .moon{
+  .moon {
     fill: var(--arrow);
   }
-  .headericon{
-    fill:var(--icon-fill-hdr);
-    stroke:var(--stroke-icon);
-    stroke-width:2px;
-    transition: all 250ms ;
+  .headericon {
+    fill: var(--icon-fill-hdr);
+    stroke: var(--stroke-icon);
+    stroke-width: 2px;
+    transition: all 250ms;
   }
-  .headericon:hover{
-    fill:var(--icon-fill-hdr-h);
-    stroke:var(--stroke-icon-h);
+  .headericon:hover {
+    fill: var(--icon-fill-hdr-h);
+    stroke: var(--stroke-icon-h);
     box-shadow: 0px 10px 10px unset var(--icon-fill-hdr-h);
-    stroke-width:1px;
-    transition: all 250ms ;
+    stroke-width: 1px;
+    transition: all 250ms;
   }
-
 
   .word {
     margin: auto;
     color: rgb(0, 0, 0);
-    font-family: 'Conquera';
+    font-family: "Conquera";
     font-weight: 800;
-    font-style: normal;  
-    
+    font-style: normal;
+
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
   }
 
-  #text{
+  #text {
     display: flex;
     align-items: center;
 
-    font-family: 'Conquera';
+    font-family: "Conquera";
     font-weight: 800;
-    font-style: normal;  
+    font-style: normal;
 
     font-size: 60px;
     letter-spacing: 5px;
@@ -269,12 +368,9 @@ justify-content: space-between;
     color: var(--title-color);
     -webkit-text-stroke: 0.8px var(--accent-color);
     text-shadow: 0 0px 12px var(--shadow-color);
-
   }
 
-  
-
-  #Projects{
+  #Projects {
     z-index: 25;
 
     display: flex;
@@ -284,52 +380,36 @@ justify-content: space-between;
 
     padding: 5% 0% 0% 0%;
   }
-  
-  #About{
+
+  #About {
     z-index: 25;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin: 0 auto;
-    
+
     padding: 5% 0% 0% 0%;
   }
+  .gradientAnimationdark {
+    background-color: rgba(42, 42, 42, 0.364);
   
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 15px 15px 15px 15px;
   
+    position: absolute;
   
-  .contitem{
-    // width: 100vw;
-    transition: all 500ms;
-    
-
-    &__imgCont {
-    --border: 2.5px; /* the border width */
-    --slant: 3em; /* control the slanted corners */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 300px;
-    font-family: "Michroma", sans-serif;
-    color: var(--accent-color);
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-
-    color: var(--accent-color);
-    background: linear-gradient(
-          to bottom left,
-          var(--button-color) 50%,
-          #0000 50.1%
-        )
-        top right,
-      linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%) bottom
-        left;
+    --slant: 2.58em;
+    width: auto;
+    max-width: 500px;
+    min-height: 100px;
+    padding: 15px;
     background-size: calc(var(--slant) + 1.3 * var(--border))
       calc(var(--slant) + 1.3 * var(--border));
     background-repeat: no-repeat;
-    box-shadow: 0 0 0 200px inset var(--s, #0000),
-      0 0 0 var(--border) inset var(--button-color);
     clip-path: polygon(
       0 0,
       calc(100% - var(--slant)) 0,
@@ -338,82 +418,227 @@ justify-content: space-between;
       var(--slant) 100%,
       0 calc(100% - var(--slant))
     );
+  }
+  .gradientAnimationlight {
+    transition: all 1000ms ease-out;
+  
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  
+    margin: 15px 15px 15px 15px;
+  
+    position: absolute;
+  
+    --slant: 2.58em;
+    width: auto;
+    max-width: 500px;
+    min-height: 100px;
+    padding: 15px;
+    background-size: calc(var(--slant) + 1.3 * var(--border))
+      calc(var(--slant) + 1.3 * var(--border));
+    background-repeat: no-repeat;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--slant)) 0,
+      100% var(--slant),
+      100% 100%,
+      var(--slant) 100%,
+      0 calc(100% - var(--slant))
+    );
+  
+    &:hover {
+      background: linear-gradient(50deg, #b3ffab, #fcf2e0, #515afe);
+      // background-color: rgba(32, 30, 30, 0.797);
+      background-size: 150% 150% !important;
+      animation: gradient-animation 5s ease-in-out infinite alternate both;
+  
+      @keyframes gradient-animation {
+        0% {
+          background-position: right top;
+        }
+        50% {
+          background-position: left bottom;
+        }
+        100% {
+          background-position: right top;
+        }
+      }
+    }
+  }
+  
 
-    .buttonimage{
-      display: none;
-      transition: all 400ms ;
-    }
-    &:hover{
-      .contitem__img{
-        transition: all 400ms ;
-        filter: brightness(2) grayscale(0.51) opacity(0.1) contrast(0.8) saturate(1.2);
+  .imagePreview {
+    position: absolute;
+    object-fit: contain;
+    opacity: 0;
+    transition-property: opacity;
+
+    left: -2rem;
+    right: 0;
+    top: -0.3rem;
+    bottom: 0;
+    filter: brightness(1) grayscale(0.5) opacity(0.3)
+    saturate(1.2);
+    width: 600px;
+    height: 105%;
+    
+  }
+  .contitem {
+    // width: 100vw;
+    // transition: all 500ms;
+    // transition: all 1000ms ease-out;
+    // min-width: 300px !important;
+
+    &__imgCont {
+      // min-width: 300px !important;
+      // min-height: 300px !important;
+      --border: 2.5px; /* the border width */
+      --slant: 3em; /* control the slanted corners */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Michroma", sans-serif;
+      color: var(--accent-color);
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+
+      color: var(--accent-color);
+      background: linear-gradient(
+            to bottom left,
+            var(--button-color) 50%,
+            #0000 50.1%
+          )
+          top right,
+        linear-gradient(to top right, var(--button-color) 50%, #0000 50.1%)
+          bottom left;
+      background-size: calc(var(--slant) + 1.3 * var(--border))
+        calc(var(--slant) + 1.3 * var(--border));
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 200px inset var(--s, #0000),
+        0 0 0 var(--border) inset var(--button-color);
+      clip-path: polygon(
+        0 0,
+        calc(100% - var(--slant)) 0,
+        100% var(--slant),
+        100% 100%,
+        var(--slant) 100%,
+        0 calc(100% - var(--slant))
+      );
+
+      .buttonimage {
+        display: none;
+        transition: all 400ms;
       }
-      .buttonimage{
-        transition: all 400ms ;
-        display: flex;
+      &:hover {
+        .imagePreview {
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.8s;
+          transition-delay: 1.9s;
+          // transition: 1s;
+          opacity: 1;
+        }
+        .backgroundAnimatedark {
+          min-width: 350px;
+          min-height: 300px;
+          background: linear-gradient(
+            -45deg,
+            #0d0d0d00,
+            #28282888,
+            var(--accent-color-muted),
+            #171717d6,
+            #070707a8
+          );
+          background-size: 500% 200% !important;
+          animation: gradient 2s ease;
+          transition: all 1000ms ease-out;
+        }
+        .backgroundAnimatelight {
+          background: linear-gradient(
+            -45deg,
+            #ffffff,
+            #ffffff,
+            var(--accent-color-muted),
+            #f8f8f8d6,
+            #f8f8f8d6
+          );
+          background-size: 500% 200% !important;
+          animation: gradient 2s ease;
+          transition: all 1000ms ease-out;
+        }
+        .contitem__img {
+          // transition: all 400ms;
+          transition: all 1000ms ease-out;
+          filter: brightness(0) grayscale(0.1) opacity(0) contrast(0.8)
+            saturate(1.2);
+        }
+        .buttonimage {
+          transition: all 400ms;
+          display: flex;
+          // color: var(--text-color-c);
+        }
+
+        .buttonimage:focus-visible {
+          transition: all 300ms;
+          outline-offset: calc(-1 * var(--border));
+          outline: var(--border) solid #000c;
+          clip-path: none;
+          background-size: 0 0;
+        }
+        .buttonimage:hover,
+        .buttonimage:active {
+          transition: all 300ms;
+          background-size: 100% 100%;
+          --t: 0.2s 0.1s;
+          color: var(--text-color-c);
+        }
+        .buttonimage:active {
+          --s: #0005;
+          transition: none;
+        }
       }
-      
-      .buttonimage:focus-visible {
-        transition: all 300ms ;
-        outline-offset: calc(-1 * var(--border));
-        outline: var(--border) solid #000c;
-        clip-path: none;
-        background-size: 0 0;
-      }
-      .buttonimage:hover,
-      .buttonimage:active{
-        transition: all 300ms;
-        background-size: 100% 100%;
-        --t: 0.2s 0.1s;
-        color: var(--text-color-c);
-      }
-      .buttonimage:active {
-        --s: #0005;
-        transition: none;
-      }
-      
-    }
-      
     }
     &__img {
       --slant: 4.1em; /* control the slanted corners */
       width: auto;
       max-width: 500px;
-    min-height: 100px;
-    padding: 15px;
-    background-size: calc(var(--slant) + 1.3 * var(--border))
-    calc(var(--slant) + 1.3 * var(--border));
-    background-repeat: no-repeat;
-    clip-path: polygon(
-      0 0,
-      calc(100% - var(--slant)) 0,
-      100% var(--slant),
-      100% 100%,
-      var(--slant) 100%,
-      0 calc(100% - var(--slant))
-    );
-    transition: all 800ms;
+      min-width: 530px;
+      min-height: 300px;
 
-
+      padding: 15px;
+      background-size: calc(var(--slant) + 1.3 * var(--border))
+        calc(var(--slant) + 1.3 * var(--border));
+      background-repeat: no-repeat;
+      clip-path: polygon(
+        0 0,
+        calc(100% - var(--slant)) 0,
+        100% var(--slant),
+        100% 100%,
+        var(--slant) 100%,
+        0 calc(100% - var(--slant))
+      );
+      transition: all 800ms;
+    }
   }
-}
 
-.svgBodyleft{
-  // stroke: var(--text-color);
-  fill: var(--background-color);
-}
-.svgBodyright{
-  fill: var(--background-color);
-  transform: translate(0%,-5%);
-}
-.contsvgpage{
-  position: absolute;
-  top: 70%;
-  margin: 0 auto;
-  width: 90%;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;    
-}
+  .svgBodyleft {
+    // stroke: var(--text-color);
+    fill: var(--background-color);
+  }
+  .svgBodyright {
+    fill: var(--background-color);
+    transform: translate(0%, -5%);
+  }
+  .contsvgpage {
+    position: absolute;
+    top: 70%;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }

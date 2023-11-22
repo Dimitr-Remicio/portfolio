@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Front-end", "Back-end"], // Strings to display
+      strings: ["Front End"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 1000,
       typeSpeed: 100,
@@ -38,12 +38,12 @@ const Home = () => {
         <div className={s.bgHome}></div>
 
         <div className={s.contHome}>
-          <p className={s.contHome__p}>I`M</p>
+          <h1 className={s.contHome__p}><b className={s.nameStyle}>Dimitr Remicio</b></h1>
           <div className={s.contitle}>
             <h1 className={s.contHome__h1} ref={el}></h1>
             <div id="Bartyping" className={s.barTyping}></div>
           </div>
-          <h3 className={s.contHome__h3}>DEVELOPER</h3>
+          <h3 className={s.contHome__h3}>Developer</h3>
         </div>
       </div>
     </>

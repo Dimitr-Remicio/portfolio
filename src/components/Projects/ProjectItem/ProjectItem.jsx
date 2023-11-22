@@ -61,8 +61,18 @@ const ProjectItem = ({ data, Context }) => {
                 glarePosition="bottom"
                 glareBorderRadius="10px"
               >
+                <div className={"gradientAnimation" + theme}>
+                <div className={"backgroundAnimate" + theme}></div>
                 <img
                   src={image + name + theme + '.jpg'}
+                  // id="Anim_tion"
+                  className="imagePreview"
+                  alt="image not found"
+                />
+                </div>
+
+                <img
+                  src={image + name + theme + '.png'}
                   id="Anim_tion"
                   className="contitem__img"
                   alt="image not found"

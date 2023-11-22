@@ -16,8 +16,7 @@ const About = () => {
               <b className={s.name}>Dimitr Remicio</b>
               <br />
               <br />
-              Un desarrollador Full-stack y diseñador Web. Me gusta aprender
-              nuevas tecnologías, seguir desafiándome y lograr un gran impacto.
+              Me gusta aprender nuevas tecnologías, seguir desafiándome y lograr un gran impacto.
               <br />
               <svg
                 className={s.separator}
@@ -32,8 +31,8 @@ const About = () => {
                 ></use>
               </svg>
               <br />
-              Me destaco en el desarrollo Front-end. sin embargo, me apasiona el
-              realizar diseño. Dado que producir un sitio web moderno requiere
+              Me destaco en el Front-end el causar un gran impacto a primera vista 
+              es algo que es primordial en este dado que producir un sitio web moderno requiere
               la combinación de diseño, tecnología de servidor y la capacidad
               con la que interactúan los usuarios. creo que tener experiencia
               tanto en diseño, como en desarrollo permite lograr experiencias de
