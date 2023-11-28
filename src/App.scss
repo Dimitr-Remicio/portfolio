@@ -85,12 +85,19 @@
     @keyframes gradient-animation {
       0% {
         background-position: right top;
+        opacity: 1;
       }
       50% {
         background-position: left bottom;
+        opacity: 1;
+      }
+      80% {
+        // background-position: left bottom;
+        opacity: 0.5;
       }
       100% {
         background-position: right top;
+        opacity: 1;
       }
     }
   }
@@ -101,18 +108,29 @@
   0% {
     transform: rotate(0deg);
     background-position: 0% 50%;
+    opacity: 0;
   }
-  20% {
-    transform: rotate(80deg);
-    background-position: 100% 50%;
+  10%{
+    opacity: 0.8;
+    
   }
-  50% {
-    transform: rotate(300deg);
-    background-position: 100% 50%;
+  // 20% {
+  //   transform: rotate(0deg);
+  //   background-position: 50% 50%;
+  //   opacity: 1;
+  // }
+  // 50% {
+  //   transform: rotate(300deg);
+  //   background-position: 100% 50%;
+  //   opacity: 1;
+  // }
+  95%{
+    opacity: 1;
   }
   100% {
-    transform: rotate(0deg);
-    background-position: 230% 50%;
+    transform: rotate(50deg);
+    background-position: 125% 50%;
+    opacity: 0;
   }
 }
 
@@ -479,7 +497,7 @@
     right: 0;
     top: -0.3rem;
     bottom: 0;
-    filter: brightness(1) grayscale(0.5) opacity(0.3)
+    filter: brightness(0.8) grayscale(0) opacity(0.4)
     saturate(1.2);
     width: 600px;
     height: 105%;
@@ -536,7 +554,7 @@
         .imagePreview {
           transition-timing-function: ease-in-out;
           transition-duration: 0.8s;
-          transition-delay: 1.9s;
+          transition-delay: 0.7s;
           // transition: 1s;
           opacity: 1;
         }
@@ -546,26 +564,26 @@
           background: linear-gradient(
             -45deg,
             #0d0d0d00,
-            #28282888,
+            #0d0d0dc9,
             var(--accent-color-muted),
             #171717d6,
             #070707a8
           );
           background-size: 500% 200% !important;
-          animation: gradient 2s ease;
+          animation: gradient 1.5s ease;
           transition: all 1000ms ease-out;
         }
         .backgroundAnimatelight {
           background: linear-gradient(
             -45deg,
-            #ffffff,
-            #ffffff,
+            #fafafa,
+            #fafafa,
             var(--accent-color-muted),
-            #f8f8f8d6,
-            #f8f8f8d6
+            #f8f8f8e6,
+            #f8f8f8
           );
           background-size: 500% 200% !important;
-          animation: gradient 2s ease;
+          animation: gradient 1.5s ease;
           transition: all 1000ms ease-out;
         }
         .contitem__img {

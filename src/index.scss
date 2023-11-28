@@ -52,6 +52,7 @@ h2 {
 
 p {
   font-family: "Michroma", sans-serif;
+  
   font-weight: 200;
   font-size: 14px;
   letter-spacing: 1px;
@@ -143,7 +144,7 @@ button:active {
 
 .blob {
   background-color: var(--ball-color);
-  height: 30vmax;
+  height: 20vmax;
   aspect-ratio: 1;
   // width: 500px;
   position: relative;
@@ -166,8 +167,8 @@ button:active {
 
   position: absolute;
   z-index: 1;
-  backdrop-filter: blur(13vmax);
-  -webkit-backdrop-filter: blur(13vmax);
+  backdrop-filter: blur(10vmax);
+  -webkit-backdrop-filter: blur(10vmax);
 }
 
 @keyframes shadee {
@@ -229,7 +230,7 @@ button:active {
     width: 100vw;
     left: 0;
     top: 0;
-
+    background-color: #0000;
     position: absolute;
     z-index: 1;
     backdrop-filter: blur(11vmax);
@@ -266,13 +267,13 @@ button:active {
 }
 
 #Anim_tion {
-  view-timeline-name: --all;
-  view-timeline-name: block;
+  // view-timeline-name: --all;
+  // view-timeline-name: block;
 
-  animation-timeline: --all;
-  animation-name: show;
-  // animation-name: hide;
+  // animation-timeline: --all;
+  // animation-name: show;
+  // // animation-name: hide;
 
-  animation-range: entry 5% cover 20%;
-  animation-fill-mode: both;
+  // animation-range: entry 5% cover 20%;
+  // animation-fill-mode: both;
 }

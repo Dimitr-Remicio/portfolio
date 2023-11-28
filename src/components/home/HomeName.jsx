@@ -6,11 +6,11 @@ import s from "./Home.module.scss";
 
 const Home = () => {
   const el = useRef(null);
-
-
+  const dev = "Developer";
+  
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Front End"], // Strings to display
+      strings: ["Front End " + dev, "Grapich Designer"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 1000,
       typeSpeed: 100,
@@ -33,17 +33,20 @@ const Home = () => {
     <>
 
       <div className={s.section} id="Home">
+        <div className={s.blurredHome}></div>
+
         <div id="blob" className="blob"></div>
         <div id="blur" className="blur"></div>
+        
         <div className={s.bgHome}></div>
-
+        
         <div className={s.contHome}>
-          <h1 className={s.contHome__p}><b className={s.nameStyle}>Dimitr Remicio</b></h1>
+          <h1 className={s.contHome__p}>Dimitr Remicio</h1>
           <div className={s.contitle}>
             <h1 className={s.contHome__h1} ref={el}></h1>
             <div id="Bartyping" className={s.barTyping}></div>
           </div>
-          <h3 className={s.contHome__h3}>Developer</h3>
+          {/* <h3 className={s.contHome__h3}>Developer</h3> */}
         </div>
       </div>
     </>

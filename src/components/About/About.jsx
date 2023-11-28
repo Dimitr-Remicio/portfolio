@@ -8,14 +8,14 @@ const About = () => {
   return (
     <>
       <div id="About">
-        <h2>About</h2>
+        <h2>About Me</h2>
         <div className={s.aboutcont}>
           <div className={s.description}>
             <p className={s.About__paragr}>
-              Hola, soy {""}
-              <b className={s.name}>Dimitr Remicio</b>
-              <br />
-              <br />
+              {/* Hola, soy {""} */}
+              {/* <b className={s.name}>Dimitr Remicio</b> */}
+              {/* <br /> */}
+              {/* <br /> */}
               Me gusta aprender nuevas tecnologías, seguir desafiándome y lograr un gran impacto.
               <br />
               <svg
