@@ -35,8 +35,6 @@ const Home = () => {
       <div className={s.section} id="Home">
         <div className={s.blurredHome}></div>
 
-        <div id="blob" className="blob"></div>
-        <div id="blur" className="blur"></div>
         
         <div className={s.bgHome}></div>
         

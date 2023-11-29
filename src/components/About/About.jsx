@@ -7,7 +7,7 @@ import image from "/assets/images/meimage2.jpg";
 const About = () => {
   return (
     <>
-      <div id="About">
+      <div id="About" className="contpage">
         <h2>About Me</h2>
         <div className={s.aboutcont}>
           <div className={s.description}>
