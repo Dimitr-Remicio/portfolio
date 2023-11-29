@@ -4,9 +4,12 @@
 @import "./forms.scss";
 
 @import-normalize;
-#root{
-  height: auto;
-}
+// #root {
+//   background-image: var(--root-bg);
+//   background-position: 0%;
+//   background-repeat: repeat-y;
+//   background-size: 300%;
+// }
 
 #bgpage {
   background-image: var(--root-bg);
@@ -22,7 +25,6 @@
   top: 90vh;
 
   backdrop-filter: blur(20vmax);
-
 }
 
 html {
@@ -209,6 +211,9 @@ button:active {
   backdrop-filter: blur(2vmax);
 
   }
+  // #root{
+  //   background-size: contain;
+  // }
   .bodyBlur {
     width: 100vw;
     height: 500vh;
@@ -231,7 +236,7 @@ button:active {
 
     background: linear-gradient(
       0deg,
-      var(--background-color-20) 0%,
+      var(--background-color-none) 0%,
       var(--background-color-50) 20%,
       var(--background-color-60) 28%,
       var(--background-color-70) 40%,
@@ -239,7 +244,7 @@ button:active {
       var(--background-color-70) 60%,
       var(--background-color-60) 70%,
       var(--background-color-50) 90%,
-      var(--background-color-20) 100%
+      var(--background-color-none) 100%
     );
     // background: linear-gradient(
     //   1deg,

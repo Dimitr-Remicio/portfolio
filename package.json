@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-parallax-tilt": "^1.7.158",
+    "resend": "^2.0.0",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
