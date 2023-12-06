@@ -17,3 +17,14 @@ document.onpointermove = (e) => {
 
 
 
+// import { Resend } from 'resend';
+// import ContactMe from './components/ContactMe/ContactMe';
+  
+// const resend = new Resend('re_123456789');
+  
+// resend.sendEmail({
+//   from: 'you@example.com',
+//   to: 'user@gmail.com',
+//   subject: 'hello world',
+//   react: <ContactMe firstName="John" product="MyApp" />,
+// });

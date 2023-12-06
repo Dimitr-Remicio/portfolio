@@ -1,6 +1,10 @@
+  
+
 import s from "./Contact.module.scss";
 
 const ContactMe = () => {
+
+
   return (
     <div className={s.contact} id="contact">
       <div className={s.cont}>
