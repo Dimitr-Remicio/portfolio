@@ -39,7 +39,7 @@
   background-repeat: no-repeat;
   background-size: 300%;
   position: absolute;
-  z-index: 11;
+  z-index: 2;
 
   transition: all 0ms;
 }
@@ -196,7 +196,21 @@
 
     overflow: hidden;
   }
+  .blurredHome{
+    z-index: 10;
+  
+    backdrop-filter: blur(0vmax);
+  
+  }
+  .meimg{
+    position: relative;
 
+    left: 50rem;
+    bottom: 0rem;
+    z-index: 23;
+    
+
+  }
   .bgHome {
     height: 100vh;
     width: 100vw;
@@ -208,8 +222,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    z-index: 11;
+    z-index: 2;
 
+    // filter: brightness(60%) contrast(80%) opacity(20%);
     transition: all 0ms;
   }
   // contnt

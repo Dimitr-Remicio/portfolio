@@ -44,8 +44,7 @@
   grid-gap: 36px;
   align-items: center;
   justify-content: center;
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
   padding-top: 30px;
   overflow: hidden;
   clip-path: polygon(0 20px, 20px 0, 20px 0, 20px 0, 0 20px, 0 20px);
@@ -82,7 +81,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 80vw;
+
+  max-width: 400px;
 }
 
 .input__element {
@@ -145,4 +146,22 @@ input:focus ~ label,
 input:valid ~ label {
   // top: -20px;
   font-size: 12px;
+}
+@media screen and (min-width:1024px) {
+  .input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    max-width: 500px;
+    
+    & input{
+
+      font-size: 15px !important;
+    }
+  }
+  .form{
+    font-size: 20px !important;
+    width: 600px;
+  }
 }

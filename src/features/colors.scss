@@ -37,7 +37,9 @@
   --black:#000000;
   --black-c:#0091ff;
   
-  --bg-pattern: url(/assets/images/bgwhite.png);
+  // --bg-pattern: url(/assets/images/bgcyberpnk.jpg);
+  --bg-pattern: url(/assets/images/bglight.png);
+
   --root-bg:url(/assets/images/rootbgw.png);
 }
 .dark {
@@ -81,6 +83,7 @@
   --black-c:#eda202;
   
   
+  // --bg-pattern: url(/assets/images/bgcyberpnk.jpg);
   --bg-pattern: url(/assets/images/bgdark.png);
   --root-bg:url(/assets/images/rootbgd.png);
 }
