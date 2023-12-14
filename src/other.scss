@@ -18,7 +18,15 @@
 .icon-line-tag{
   width: 100%;
 }
+.icosn{
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: center;
 
+  width: 20px;
+  
+}
 .h1 {
   font-family: "Conquera Heavy";
   // font-weight: normal;

@@ -6,8 +6,8 @@ import './other.scss'
 
 import Headers from './features/head/head';
 // style's ∇
-import './index.scss';
 
+import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   

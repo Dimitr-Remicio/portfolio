@@ -1,0 +1,20 @@
+
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    -webkit-border-radius: 8ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--background-color);
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }

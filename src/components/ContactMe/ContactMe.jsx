@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 
 import { useState } from "react";
 import Notiflix from "notiflix";
+import { motion } from "framer-motion";
 
 function ContactMe() {
   let [data, setData] = useState();
@@ -113,7 +114,13 @@ function ContactMe() {
     <div className={s.contact} id="contact">
       {/* <Email data={data} /> */}
       <div className={s.cont}>
-        <div className={s.mediacont}>
+        <motion.div
+          className={s.mediacont}
+          initial={{ opacity: 0, y: -500 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          animate={{ y: 0 }}
+        >
           <h3>Contact Me</h3>
           <p>
             Si estas interesado, no dudes en contactarme puedes hacerlo
@@ -121,7 +128,7 @@ function ContactMe() {
           </p>
           <h4>Email</h4>
           <p>dimitr.darm27@gmail.com</p>
-        </div>
+        </motion.div>
         <div>
           <div className={s.wrp_Form}>
             <Formik

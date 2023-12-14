@@ -1,14 +1,23 @@
 import s from "./Skills.module.scss";
 import sprite from "../../features/sprite.svg";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <>
-      <h2>my Skills</h2>
-      <div className={s.Info}>
+      <h2>
+        my Skills
+      </h2>
+      <motion.div
+        className={s.Info}
+        initial={{ opacity: 0, y: -500 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.1 }}
+        animate={{ y: 0 }}
+      >
         <div className={s.Skillscont}>
           <div className={s.separator}>
-            <div className={s.nameTag}> 
+            <div className={s.nameTag}>
               <p>Progammign</p>
             </div>
             <svg className="icon icon-line-tag">
@@ -16,7 +25,13 @@ const Skills = () => {
             </svg>
           </div>
 
-          <li className={s.grid}>
+          <motion.li
+            className={s.grid}
+            initial={{ opacity: 0, y: -500 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            animate={{ y: 0 }}
+          >
             <div className={s.box} id="html">
               <svg className={s.iconhtml} viewBox="0 0 32 32" width="30">
                 <use href={sprite + "#icon-html"}></use>
@@ -47,18 +62,24 @@ const Skills = () => {
               </svg>
               NODE
             </div>
-          </li>
+          </motion.li>
 
           <div className={s.separator}>
-            <div className={s.nameTag}> 
+            <div className={s.nameTag}>
               <p>Tools and Other's</p>
             </div>
             <svg className="icon icon-line-tag">
               <use xlinkHref={sprite + "#icon-linetag"}></use>
             </svg>
           </div>
-          
-          <li className={s.grid}>
+
+          <motion.li
+            className={s.grid}
+            initial={{ opacity: 0, y: -500 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            animate={{ y: 0 }}
+          >
             <div className={s.box} id="node">
               <svg className={s.iconhtml} viewBox="0 0 32 32" width="30">
                 <use href={sprite + "#icon-git"}></use>
@@ -126,9 +147,9 @@ const Skills = () => {
               </svg>
               Figma
             </div>
-          </li>
+          </motion.li>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

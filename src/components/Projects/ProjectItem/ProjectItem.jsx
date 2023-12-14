@@ -1,17 +1,24 @@
 import s from "./ProjectItem.module.scss";
 import sprite from "../../../features/sprite.svg";
 import Tilt from "react-parallax-tilt";
-import { useContext } from 'react';
+import { useContext } from "react";
 import ProjectUsed from "./projectUsed";
+import { motion } from "framer-motion";
 
 const ProjectItem = ({ data, Context }) => {
-
   const theme = useContext(Context);
   const image = `/portfolio/assets/images/`;
 
   return data.map(
     ({ id, number, name, title, description, link, orientation, items }) => (
-      <li key={id} className={"contitem__" + orientation}>
+      <motion.li
+        key={id}
+        className={"contitem__" + orientation}
+        initial={{ opacity: 0, y:-500}}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.1}}
+        animate={{ y: 0 }}
+      >
         <div className={s.contitem__info}>
           <div className={s.contitem__descrp}>
             <div className={s.numberitem}>
@@ -62,17 +69,17 @@ const ProjectItem = ({ data, Context }) => {
                 glareBorderRadius="10px"
               >
                 <div className={"gradientAnimation" + theme}>
-                <div className={"backgroundAnimate" + theme}></div>
-                <img
-                  src={image + name + theme + '.jpg'}
-                  // id="Anim_tion"
-                  className="imagePreview"
-                  alt="image not found"
-                />
+                  <div className={"backgroundAnimate" + theme}></div>
+                  <img
+                    src={image + name + theme + ".jpg"}
+                    // id="Anim_tion"
+                    className="imagePreview"
+                    alt="image not found"
+                  />
                 </div>
 
                 <img
-                  src={image + name + theme + '.png'}
+                  src={image + name + theme + ".png"}
                   id="Anim_tion"
                   className="contitem__img"
                   alt="image not found"
@@ -94,7 +101,7 @@ const ProjectItem = ({ data, Context }) => {
             )}
           </div>
         </Tilt>
-      </li>
+      </motion.li>
     )
   );
 };

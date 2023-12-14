@@ -34,9 +34,8 @@ function App() {
 
   return (
     <>
-        <div id="bgpage"></div>
+      <div id="bgpage"></div>
 
-    
       <div>
         <svg
           className="iconModeDark"
@@ -68,7 +67,6 @@ function App() {
           </defs>
         </svg>
       </div>
-     
 
       <Dark toggle={toggleTheme} onClick={toggleTheme} />
       <div className="bodyBlur">
@@ -81,6 +79,7 @@ function App() {
           <Home contain={ThemeContext} />
         </>
       </Container>
+
 
       <Container>
         <ProjectList>
@@ -105,9 +104,6 @@ function App() {
       <Container>
         <div className="contsvgpage"></div>
       </Container>
-
-
-      
     </>
   );
 }

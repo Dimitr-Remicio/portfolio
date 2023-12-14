@@ -1,5 +1,4 @@
-@import '../features/colors.scss';
-
+@import "../features/colors.scss";
 
 .checkbox {
   opacity: 0;
@@ -10,13 +9,10 @@
 
 .iconModeDark {
   cursor: pointer;
-  transition: all 250ms ;
-  transition: all 250ms  ease-in-out;
-
-
-
+  transition: all 250ms;
+  transition: all 250ms ease-in-out;
 }
-.iconcolor{
+.iconcolor {
   fill: black;
 }
 
@@ -36,4 +32,3 @@
 .checkbox:checked + .label .ball {
   transform: translateX(12px);
 }
-

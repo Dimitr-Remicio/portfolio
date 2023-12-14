@@ -2,6 +2,7 @@
 @import "./Fonts.scss";
 @import "./button.scss";
 @import "./forms.scss";
+@import "./glitch.scss";
 
 @import-normalize;
 // #root {
@@ -133,7 +134,6 @@ button:active {
   transition: none;
 }
 
-
 .shadowHome {
   width: 100vw;
   height: 900px;
@@ -181,35 +181,113 @@ button:active {
   backdrop-filter: blur(10vmax);
   -webkit-backdrop-filter: blur(10vmax);
 }
+// me
 
-@keyframes shadee {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.parallax-effect {
+  width: 400px;
+  height: 380px;
+  border: none;
+  border-radius: 50%;
+  background-color: #00000000;
+  transition: all 800ms ease;
 }
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  50% {
-    scale: 1 1.5;
-  }
-  to {
-    rotate: 360deg;
+.cybr:hover {
+  transition: all 800ms ease;
+  & .eclipse {
+    transition: all 800ms ease;
   }
 }
 
+.divme {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 25;
+}
+
+.inner-element {
+  // height: 230px;
+  background-color: #ff000000 !important;
+  
+  transform: translateZ(50px) !important;
+}
+
+.eclipse {
+  background: linear-gradient(
+    320deg,
+    var(--accent-color) 0%,
+    var(--ball-color) 60%
+  );
+  box-shadow: inset 0px 0px 150px 50px var(--background-color-0);
+
+  transition: all 800ms ease;
+  border-radius: 50%;
+
+  // background-color: #00000000;
+  position: relative;
+  width: 440px !important;
+  z-index: 28;
+  height: 440px !important;
+  background-color: #ff000000 !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imgen {
+  position: absolute;
+  width: 380px !important;
+  // overflow: hidden;
+  margin: 0 auto;
+  // border-bottom-right-radius: 30%;
+  // border-bottom-left-radius: 30%;
+  bottom: 0rem;
+  right: 0.2rem;
+  // transform: translate(-42%,-60%);
+  z-index: 25;
+}
+.imgen2 {
+  position: absolute;
+  width: 383px !important;
+  // overflow: hidden;
+  height: auto;
+
+  object-fit: cover;
+  margin: 0 auto;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 20%;
+  bottom: 1.8rem;
+  right: -1.2rem;
+  // transform: translate(-42%,-60%);
+  z-index: 26;
+  transform: translateZ(50px) !important;
+}
+
+@media screen and (min-width: 700px) {
+  .divme {
+    position: relative;
+    top: 30%;
+    left: 15%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 25;
+  }
+
+}
 @media screen and (min-width: 1200px) {
   #bgpage {
     background-size: contain;
     height: 740vmax;
     position: absolute;
     z-index: 3;
-  backdrop-filter: blur(2vmax);
-
+    backdrop-filter: blur(2vmax);
   }
   // #root{
   //   background-size: contain;
@@ -282,58 +360,15 @@ button:active {
     // backdrop-filter: blur(0vmax);
     -webkit-backdrop-filter: blur(11vmax);
   }
-  .divme{
-    position: absolute;
-    right: 15vw;
-    bottom: 20vh;
-    width:auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 25;
-  }
-  .parallax-effect{
-    width: 400px;
-    height: 400px;
-    background-color: var(--background-color);
-    border-radius: 50%;
-    border: none;
-    
+  .divme {
+    transform: translate(-4vw, -40%);
   }
   
-  .inner-element{
-    height: 230px;
-    transform: translateZ(30px) !important;
-  }
-  .eclipse{
-    width: 400px;
-    height: 450px;
-    overflow: hidden;
-  }
-  .imgen{
-    position: absolute;
-    width: 400px !important;
-    overflow: hidden;
-    margin: 0 auto;
-    border-bottom-right-radius: 40%;
-    border-bottom-left-radius: 45%;
-    bottom: -4rem;
-    // right: 0;
-    // transform: translate(-42%,-60%);
-    z-index: 25;
-  }
-  .imgen2{
-    position: absolute;
-    width: 400px !important;
-    overflow: hidden;
-    margin: 0 auto;
-    border-bottom-right-radius: 40%;
-    border-bottom-left-radius: 45%;
-    bottom: -4rem;
-    // right: 0;
-    // transform: translate(-42%,-60%);
-    z-index: 25;
+  
+}
+@media screen and (min-width: 1500px) {
+  .divme {
+    transform: translate(-8vw, -40%);
   }
 }
 
@@ -375,4 +410,24 @@ button:active {
 
   // animation-range: entry 5% cover 20%;
   // animation-fill-mode: both;
+}
+
+@keyframes shadee {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
 }

@@ -12,7 +12,7 @@
   display: flex;
 
   align-items: center;
-
+  align-items: flex-start;
   overflow: hidden;
 }
 .blurredHome{
@@ -248,6 +248,7 @@
   }
 
   .contHome {
+    padding-top: 80px;
     position: absolute;
     display: flex;
     flex-direction: column;
