@@ -52,7 +52,7 @@ function Dark() {
               </svg>
             </motion.div>
           </a>
-          <a className="icosn" href="">
+          <a className="icosn" href="#contact">
               <h4 className="tagname">Contact</h4>
             <motion.div className="effectItem">
               <svg

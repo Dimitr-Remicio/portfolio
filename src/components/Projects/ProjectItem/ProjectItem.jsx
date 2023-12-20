@@ -51,7 +51,7 @@ const ProjectItem = ({ data, Context }) => {
           perspective={1800}
           scale={1.02}
           transitionSpeed={2000}
-          gyroscope={true}
+          gyroscope={false}
         >
           <div className="contitem__imgCont" id="Anim_tion">
             {image.length > 0 ? (
@@ -61,7 +61,7 @@ const ProjectItem = ({ data, Context }) => {
                 perspective={2000}
                 scale={1.001}
                 transitionSpeed={2000}
-                // gyroscope={true}
+                gyroscope={false}
                 glareEnable={true}
                 glareMaxOpacity={0.5}
                 glareColor="#ffffff"

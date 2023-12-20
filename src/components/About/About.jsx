@@ -67,7 +67,8 @@ const About = () => {
               perspective={1800}
               scale={1.01}
               transitionSpeed={2000}
-              gyroscope={true}
+              gyroscope={false}
+
             >
               <div className="imgCont About__animate" id="Anim_tion">
                 <Tilt
@@ -76,7 +77,7 @@ const About = () => {
                   perspective={2000}
                   scale={1.0}
                   transitionSpeed={2000}
-                  // gyroscope={true}
+                  gyroscope={false}
                   glareEnable={true}
                   glareMaxOpacity={0.5}
                   glareColor="#ffffff"

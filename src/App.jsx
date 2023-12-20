@@ -70,7 +70,7 @@ function App() {
 
       <Dark toggle={toggleTheme} onClick={toggleTheme} />
       <div className="bodyBlur">
-        <div id="blob" className="blob"></div>
+        {/* <div id="blob" className="blob"></div>w */}
         <div id="blur" className="blur"></div>
       </div>
       <Container>

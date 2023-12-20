@@ -361,14 +361,26 @@ button:active {
     -webkit-backdrop-filter: blur(11vmax);
   }
   .divme {
-    transform: translate(-4vw, -40%);
+    position: absolute;
+    width: 500px;
+    top: 55%;
+    // right: 50% !important;
+    left: 50%;
+    margin: 0;
+    transform: translate(20%, -50%);
   }
   
   
 }
 @media screen and (min-width: 1500px) {
   .divme {
-    transform: translate(-8vw, -40%);
+    position: absolute;
+    width: 500px;
+    top: 55%;
+    right: 0% !important;
+    // left: 50%;
+    margin: 0;
+    transform: translate(55%, -50%);
   }
 }
 

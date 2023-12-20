@@ -15,16 +15,15 @@
   align-items: flex-start;
   overflow: hidden;
 }
-.blurredHome{
+.blurredHome {
   width: 100vw;
   height: 100%;
   left: 0;
-  
+
   position: absolute;
   z-index: 20;
 
   backdrop-filter: blur(0.8vmax);
-
 }
 .bgHome {
   // backdrop-filter: blur(1vmax);
@@ -71,7 +70,6 @@
   // padding: 100px 0;
   z-index: 20;
 
-
   &__h1 {
     font-family: "Conquera Heavy";
     font-weight: 800;
@@ -79,7 +77,7 @@
 
     min-height: 1em;
 
-    font-size: 25px !important;
+    font-size: 25px;
     letter-spacing: 0px;
 
     color: var(--title-color);
@@ -101,7 +99,7 @@
   }
   &__p {
     transition: all 800ms;
-    letter-spacing:2px;
+    letter-spacing: 2px;
     font-family: "Conquera Fine";
     font-size: 30px;
     color: var(--text-color);
@@ -120,6 +118,87 @@
     transition: all 800ms;
   }
 }
+.contHomeIco{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  height: 50px;
+
+
+
+  & :hover {
+    :first-child, :nth-child(2), :nth-child(3){
+      fill: var(--text-color-c);
+    }
+  } 
+  
+  & .homeIco{
+    &:hover{
+      cursor: pointer;
+      background-color: var(--accent-color);
+      width: 40px;
+
+      border-bottom-left-radius:  10px;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 5px;
+      padding: 10px 10px 10px 20px;
+      
+      transition: all 400ms;
+    }
+  }
+  & :nth-child(2){
+    &:hover{
+      cursor: pointer;
+      background-color: var(--accent-color);
+      width: 50px;
+      border-bottom-left-radius:  10px;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 20px;
+      padding: 10px 0px 10px 20px;
+      
+      transition: all 400ms;
+    }
+  }
+  & :nth-child(3){
+    &:hover{
+      cursor: pointer;
+      background-color: var(--accent-color);
+      width: 40px;
+      border-bottom-left-radius:  20px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 10px;
+      padding: 10px 10px 10px 20px;
+
+      
+      transition: all 400ms;
+    }
+  }
+}
+.homeIco{
+  cursor: pointer;
+  fill: var(--text-color);
+  background-color: var(--background-color);
+  width: 30px;
+  padding: 0;
+  transition-delay: 200ms;
+  transition: padding  800ms;
+  
+
+}
+.linkda{
+  cursor: pointer;
+  fill: var(--text-color);
+  width: 30px;
+  height: 100%;
+  // padding-left: 10px;
+
+}
+
+
+
 
 @media screen and (min-width: 500px) {
   .contHome {
@@ -127,24 +206,24 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-  
+
     margin-left: 20px;
-  
+
     background-color: none;
     color: var(--text-color);
-  
+
     z-index: 20;
-  
+
     &__h1 {
       font-family: "Conquera Heavy";
       font-weight: 800;
       font-style: normal;
       min-height: 1em;
-      
+
       height: 40px;
       font-size: 40px;
       letter-spacing: 0px;
-  
+
       color: var(--title-color);
       -webkit-text-stroke: 0.8px var(--stroke-icon);
       text-shadow: 0px 0px 10px var(--shadow-color);
@@ -155,29 +234,34 @@
       font-family: "Conquera Fine";
       font-weight: normal;
       font-style: normal;
-      font-size: 20px !important;
+      font-size: 20px;
       margin: 0;
-  
+
       color: var(--text-color);
       transition: all 800ms;
       font-size: 1.5em;
     }
     &__p {
       transition: all 800ms;
-      letter-spacing:2px;
+      letter-spacing: 2px;
       font-family: "Conquera Fine";
-      font-size: 40px;
+      font-size: 38px;
       color: var(--text-color);
       height: auto;
-  
+
       margin: 0;
     }
-  
+
     .barTyping {
-      width: 4px;
+      // font-family: "Conquera Fine";
+      position: relative;
+      background-color: #0000;
       background-color: var(--typing-color);
+      // font-size: 50px;
+      width: 4px;
       height: 30px;
-      margin-left: 0.2em;
+      // bottom: 0.2rem;çç
+      margin-left: 0.3em;
       animation: 1450ms flash infinite;
       animation-fill-mode: both;
       transition: all 800ms;
@@ -196,20 +280,17 @@
 
     overflow: hidden;
   }
-  .blurredHome{
+  .blurredHome {
     z-index: 10;
-  
+
     backdrop-filter: blur(0vmax);
-  
   }
-  .meimg{
+  .meimg {
     position: relative;
 
-    left: 50rem;
+    left: 80rem;
     bottom: 0rem;
     z-index: 23;
-    
-
   }
   .bgHome {
     height: 100vh;
@@ -239,7 +320,7 @@
 
   .barTyping {
     width: 4px;
-    background-color: var(--typing-color);
+    background-color: none !important;
     height: 100%;
     margin-left: 1em;
     animation: 1450ms flash infinite;
@@ -264,10 +345,10 @@
       font-weight: 800;
       font-style: normal;
 
-      height:20px;
+      height: 20px;
       font-size: 40px;
-      letter-spacing: 5px;
-      
+      letter-spacing: 2px;
+
       color: var(--title-color);
       -webkit-text-stroke: 0.8px var(--stroke-icon);
       text-shadow: 0px 0px 10px var(--shadow-color);
@@ -278,7 +359,154 @@
       font-weight: normal;
       font-style: normal;
       font-size: 25px !important;
-      height:20px;
+      height: 20px;
+
+      color: var(--text-color);
+      transition: all 800ms;
+      line-height: auto;
+    }
+    &__p {
+      transition: all 800ms;
+      font-size: 41px;
+      letter-spacing: 5px;
+      font-family: "Conquera Fine";
+      font-weight: normal;
+      font-style: normal;
+      color: var(--text-color);
+      height: auto;
+
+      margin: 0;
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  .section {
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+  }
+  .blurredHome {
+    z-index: 10;
+
+    backdrop-filter: blur(0vmax);
+  }
+  .meimg {
+    position: relative;
+
+    left: 80rem;
+    bottom: 0rem;
+    z-index: 23;
+  }
+  .bgHome {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+    background-image: var(--bg-pattern);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+
+    // filter: brightness(60%) contrast(80%) opacity(20%);
+    transition: all 0ms;
+  }
+  // contnt
+
+  .contitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    // max-width: 750px;
+    height: auto;
+  }
+
+  // .contitle::after {
+  //   content: "|";
+  //   height: 100%;
+  //   position: relative;
+
+  //   font-family: "Conquera";
+  //   font-weight: 800;
+  //   font-style: normal;
+  //   font-size: 50px;
+  //   top: 1rem;
+
+  //   margin: 0;
+
+  //   color: var(--typing-color);
+
+  //   animation: 1450ms flash infinite;
+  //   animation-fill-mode: both;
+  //   transition: all 800ms;
+
+  // }
+  // title animation
+
+  .barTyping{
+    position: relative;
+    width: 4px;
+    background-color: none;
+    height: 20px;
+    // margin-top: 0.5em;
+    margin-left: 0em;
+    animation: 1450ms flash infinite;
+    animation-fill-mode: both;
+    transition: all 800ms;
+  }
+
+  .contHome {
+    padding-top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    background-color: none;
+    color: var(--text-color);
+
+    z-index: 20;
+
+    &__h1 {
+      font-family: "Conquera Heavy";
+      font-weight: 800;
+      font-style: normal;
+
+      // height: 20px;
+      font-size: 30px;
+      letter-spacing: 5px;
+
+      max-width: 780px;
+      color: var(--title-color);
+      -webkit-text-stroke: 0.8px var(--stroke-icon);
+      text-shadow: 0px 0px 0px var(--shadow-color);
+    }
+
+    // &__h1::after {
+    //   width: 8px;
+    //   background-color: var(--typing-color);
+    //   height: auto;
+    //   animation: 1450ms flash infinite;
+    //   animation-fill-mode: both;
+    //   transition: all 800ms;
+    // }
+
+    &__h3 {
+      margin-top: 10px;
+      font-family: "Conquera Fine";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 25px !important;
+      height: 20px;
 
       color: var(--text-color);
       transition: all 800ms;

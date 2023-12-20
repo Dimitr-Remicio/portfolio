@@ -129,7 +129,13 @@ function ContactMe() {
           <h4>Email</h4>
           <p>dimitr.darm27@gmail.com</p>
         </motion.div>
-        <div>
+        <motion.div
+          className={s.mediacont}
+          initial={{ opacity: 0, y: -500 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          animate={{ y: 0 }}
+        >
           <div className={s.wrp_Form}>
             <Formik
               initialValues={{
@@ -201,7 +207,7 @@ function ContactMe() {
               )}
             </Formik>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Typed from "typed.js";
 import s from "./Home.module.scss";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
+import sprite from "/src/features/sprite.svg";
 
 const Home = () => {
   const el = useRef(null);
@@ -27,50 +28,16 @@ const Home = () => {
     };
   }, []);
 
-  const item = {
-    hidden: { opacity: 0, y: 200 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.6,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: -200,
-      transition: {
-        ease: "easeInOut",
-        duration: 0.8,
-      },
-    },
-  };
-  const itemMain = {
-    hidden: { opacity: 0, y: 200 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.6,
-      },
-    },
-  };
-  const container = {
-    show: {
-      transition: {
-        staggerChildren: 0.35,
-      },
-    },
-  };
-
   return (
     <>
       <div className={s.section} id="Home">
         <div className={s.blurredHome}></div>
         <div className="divme">
-          <motion.div animate={{ opacity: 1, x: -100 }} initial={{opacity:0}} transition={{ duration: 0.3, delay: 0.1 }}>
+          <motion.div
+            animate={{ opacity: 1, x: -100 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
             <Tilt
               className="parallax-effect"
               perspective={6000}
@@ -107,24 +74,55 @@ const Home = () => {
           <motion.div
             initial={{
               opacity: 0,
-              y:-100,
+              y: -100,
             }}
             animate={{
               opacity: 1,
               y: 0,
-              x:0,
+              x: 0,
             }}
             transition={{
-              delay:0,
+              delay: 0,
               duration: 0.8,
             }}
           >
             <h1 className={s.contHome__p}>Dimitr Remicio</h1>
             <div className={s.contitle}>
               <h1 className={s.contHome__h1} ref={el}></h1>
-              <div id="Bartyping" className={s.barTyping}></div>
+              <div className={s.barTyping}></div>
             </div>
           </motion.div>
+          <div className={s.contHomeIco}>
+            <a
+              href="https://github.com/Dimitr-Remicio"
+              target="_blank"
+              rel="noreferrer"
+              className={s.homeIco}
+            >
+              <svg className={s.linkda}>
+                <use href={sprite + "#icon-github"}></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dimitr-remicio-4b039017b"
+              target="_blank"
+              rel="noreferrer"
+              className={s.homeIco}
+            >
+              <svg className={s.linkda}>
+                <use href={sprite + "#icon-linkedin"}></use>
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              rel="noreferrer"
+              className={s.homeIco}
+            >
+              <svg className={s.linkda}>
+                <use href={sprite + "#icon-envelope-o"}></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </>
