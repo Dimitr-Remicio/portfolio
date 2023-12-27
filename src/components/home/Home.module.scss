@@ -54,20 +54,29 @@
 }
 
 // title animation
-
-.contHome {
-  position: absolute;
+.maxwrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  align-items: flex-start;
+  justify-content: center;
 
-  margin-left: 20px;
+  gap: 0.5rem;
+}
 
+.contHome {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin: 0 auto;
+  max-width: 90vw;
+  height: 90vh;
+  justify-content: center;
+  /* margin-left: 20px; */
+  // margin-top: 15rem;
   background-color: none;
   color: var(--text-color);
-  // backdrop-filter: blur(1vmax);
   border-radius: 20px;
-  // padding: 100px 0;
   z-index: 20;
 
   &__h1 {
@@ -75,14 +84,14 @@
     font-weight: 800;
     font-style: normal;
 
-    min-height: 1em;
+    height: auto;
 
     font-size: 25px;
     letter-spacing: 0px;
 
-    color: var(--title-color);
-    -webkit-text-stroke: 0.8px var(--stroke-icon);
-    text-shadow: 0px 0px 10px var(--shadow-color);
+    color: var(--accent-color);
+    // -webkit-text-stroke: 0.8px var(--stroke-icon);
+    // text-shadow: 0px 0px 10px var(--shadow-color);
     margin: 5px 0 5px 0;
     font-size: 30px;
   }
@@ -90,7 +99,7 @@
     font-family: "Conquera Fine";
     font-weight: normal;
     font-style: normal;
-    font-size: 20px !important;
+    font-size: 20px;
     margin: 0;
 
     color: var(--text-color);
@@ -101,7 +110,7 @@
     transition: all 800ms;
     letter-spacing: 2px;
     font-family: "Conquera Fine";
-    font-size: 30px;
+    font-size: 35px;
     color: var(--text-color);
     height: auto;
 
@@ -116,96 +125,182 @@
     animation: 1450ms flash infinite;
     animation-fill-mode: both;
     transition: all 800ms;
+    display: none;
   }
 }
-.contHomeIco{
+.contHomeIco {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  height: 50px;
+  gap: 1.2rem;
+  height: 40px;
 
-
-
-  & :hover {
-    :first-child, :nth-child(2), :nth-child(3){
-      fill: var(--text-color-c);
-    }
-  } 
+  // & :hover {
+  //   :first-child,
+  //   :nth-child(3) {
+  //     // fill: var(--text-color-c);
+  //   }
+  // }
   
-  & .homeIco{
-    &:hover{
+  & .homeIco {
+    fill: var(--text-color);
+    
+    &:hover {
       cursor: pointer;
       background-color: var(--accent-color);
+      fill: var(--text-color-c);
+
       width: 40px;
 
-      border-bottom-left-radius:  10px;
+      border-bottom-left-radius: 10px;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 10px;
       border-top-left-radius: 5px;
       padding: 10px 10px 10px 20px;
-      
+
       transition: all 400ms;
     }
   }
-  & :nth-child(2){
-    &:hover{
-      cursor: pointer;
-      background-color: var(--accent-color);
-      width: 50px;
-      border-bottom-left-radius:  10px;
-      border-bottom-right-radius: 20px;
-      border-top-right-radius: 10px;
-      border-top-left-radius: 20px;
-      padding: 10px 0px 10px 20px;
-      
-      transition: all 400ms;
+  & :nth-child(2) {
+    &:hover {
+      background-color: var(--background-color);
+      fill: var(--accent-color);
     }
+    cursor: pointer;
+    fill: var(--text-color-c);
+    background-color: var(--accent-color);
+    width: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 20px;
+    padding: 10px 0px 10px 20px;
+
+    transition: all 400ms;
+    // }
   }
-  & :nth-child(3){
-    &:hover{
+  & :nth-child(3) {
+    fill: var(--text-color);
+
+    &:hover {
       cursor: pointer;
       background-color: var(--accent-color);
       width: 40px;
-      border-bottom-left-radius:  20px;
+      border-bottom-left-radius: 20px;
       border-bottom-right-radius: 10px;
       border-top-right-radius: 5px;
       border-top-left-radius: 10px;
       padding: 10px 10px 10px 20px;
 
-      
       transition: all 400ms;
     }
   }
 }
-.homeIco{
+.homeIco {
   cursor: pointer;
-  fill: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 10px !important;
+
   background-color: var(--background-color);
-  width: 30px;
+  // width: 2px;
   padding: 0;
+  border-radius: 10px;
   transition-delay: 200ms;
-  transition: padding  800ms;
-  
-
 }
-.linkda{
+.linkda {
   cursor: pointer;
-  fill: var(--text-color);
-  width: 30px;
+  width: 40px;
   height: 100%;
+  transition: padding 800ms;
+
   // padding-left: 10px;
-
 }
-
-
-
 
 @media screen and (min-width: 500px) {
+  .contHomeIco {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 45px;
+
+    & :hover {
+      :first-child,
+      :nth-child(2),
+      :nth-child(3) {
+        fill: var(--text-color-c);
+      }
+    }
+
+    & .homeIco {
+      &:hover {
+        cursor: pointer;
+        background-color: var(--accent-color);
+        width: 55px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 5px;
+        padding: 10px 10px 10px 20px !important;
+
+        transition: all 400ms;
+      }
+    }
+    & :nth-child(2) {
+    background-color: var(--background-color);
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: var(--accent-color);
+        width: 55px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 20px;
+        padding: 10px 0px 10px 20px !important;
+
+        transition: all 400ms;
+      }
+    }
+    & :nth-child(3) {
+      &:hover {
+        cursor: pointer;
+        background-color: var(--accent-color);
+        width: 50px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 10px;
+        padding: 10px 10px 10px 20px !important;
+
+        transition: all 400ms;
+      }
+    }
+  }
+  .homeIco{
+    cursor: pointer;
+    fill: var(--text-color);
+    background-color: var(--background-color);
+    width: auto;
+    padding: 0;
+    transition-delay: 200ms;
+    transition: padding 800ms;
+    border: none;
+  }
+  .linkda {
+    cursor: pointer;
+    fill: var(--text-color);
+    width: 40px !important;
+    height: 100%;
+    // padding-left: 10px;
+  }
+
   .contHome {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    margin-top: 0;
 
     margin-left: 20px;
 
@@ -220,7 +315,8 @@
       font-style: normal;
       min-height: 1em;
 
-      height: 40px;
+      height: auto;
+      // max-width: 50px;
       font-size: 40px;
       letter-spacing: 0px;
 
@@ -265,6 +361,7 @@
       animation: 1450ms flash infinite;
       animation-fill-mode: both;
       transition: all 800ms;
+      display: block;
     }
   }
 }
@@ -313,7 +410,13 @@
   .contitle {
     display: flex;
     height: auto;
+    width: auto;
     align-items: flex-end;
+    max-width: 398px;
+  }
+
+  .maxwrapper {
+    max-width: 650px;
   }
 
   // title animation
@@ -325,6 +428,7 @@
     margin-left: 1em;
     animation: 1450ms flash infinite;
     animation-fill-mode: both;
+    display: block;
     transition: all 800ms;
   }
 
@@ -334,6 +438,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    margin-top: 0;
 
     background-color: none;
     color: var(--text-color);
@@ -344,8 +449,8 @@
       font-family: "Conquera Heavy";
       font-weight: 800;
       font-style: normal;
-
-      height: 20px;
+      width: auto;
+      height: auto;
       font-size: 40px;
       letter-spacing: 2px;
 
@@ -379,7 +484,7 @@
     }
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .section {
     width: 100%;
     height: 100vh;
@@ -391,6 +496,11 @@
 
     overflow: hidden;
   }
+
+  .maxwrapper {
+    max-width: 800px;
+  }
+
   .blurredHome {
     z-index: 10;
 
@@ -425,6 +535,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    max-width: 800px;
 
     // max-width: 750px;
     height: auto;
@@ -452,7 +563,7 @@
   // }
   // title animation
 
-  .barTyping{
+  .barTyping {
     position: relative;
     width: 4px;
     background-color: none;
@@ -461,6 +572,7 @@
     margin-left: 0em;
     animation: 1450ms flash infinite;
     animation-fill-mode: both;
+    display: block;
     transition: all 800ms;
   }
 
@@ -470,6 +582,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    margin-top: 0;
 
     background-color: none;
     color: var(--text-color);
@@ -514,7 +627,7 @@
     }
     &__p {
       transition: all 800ms;
-      font-size: 50px;
+      font-size: 54px;
       letter-spacing: 5px;
       font-family: "Conquera Fine";
       font-weight: normal;

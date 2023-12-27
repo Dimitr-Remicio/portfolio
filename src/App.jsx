@@ -101,9 +101,9 @@ function App() {
         <ContactMe Context={ThemeContext} />
       </Container>
 
-      <Container>
+      {/* <Container>
         <div className="contsvgpage"></div>
-      </Container>
+      </Container> */}
     </>
   );
 }

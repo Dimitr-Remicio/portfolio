@@ -16,7 +16,7 @@ const About = () => {
         transition={{ delay: 0.1 }}
         animate={{ y: 0 }}
       >
-        <h2>About Me</h2>
+        {/* <h2>About Me</h2> */}
         <div className={s.aboutcont}>
           <motion.div
             className={s.description}

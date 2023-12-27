@@ -32,38 +32,6 @@ const Home = () => {
     <>
       <div className={s.section} id="Home">
         <div className={s.blurredHome}></div>
-        <div className="divme">
-          <motion.div
-            animate={{ opacity: 1, x: -100 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            <Tilt
-              className="parallax-effect"
-              perspective={6000}
-              transitionSpeed={9500}
-              glareEnable={false}
-              glareMaxOpacity={0}
-              scale={0.95}
-            >
-              <img
-                className="imgen2 cybr"
-                alt="pic"
-                src="public\assets\images\me3.png"
-              />
-
-              <div className="inner-element">
-                <div className="eclipse">
-                  <img
-                    className="imgen cybr-btn__glitch"
-                    alt="pic"
-                    src="public\assets\images\me2.png"
-                  />
-                </div>
-              </div>
-            </Tilt>
-          </motion.div>
-        </div>
 
         {/* <div id="blob" className="blob"></div>
         <div id="blur" className="blur"></div> */}
@@ -72,6 +40,7 @@ const Home = () => {
 
         <div className={s.contHome}>
           <motion.div
+            className={s.maxwrapper}
             initial={{
               opacity: 0,
               y: -100,
@@ -91,7 +60,6 @@ const Home = () => {
               <h1 className={s.contHome__h1} ref={el}></h1>
               <div className={s.barTyping}></div>
             </div>
-          </motion.div>
           <div className={s.contHomeIco}>
             <a
               href="https://github.com/Dimitr-Remicio"
@@ -113,15 +81,45 @@ const Home = () => {
                 <use href={sprite + "#icon-linkedin"}></use>
               </svg>
             </a>
-            <a
-              href="#contact"
-              rel="noreferrer"
-              className={s.homeIco}
-            >
+            <a href="#contact" rel="noreferrer" className={s.homeIco}>
               <svg className={s.linkda}>
                 <use href={sprite + "#icon-envelope-o"}></use>
               </svg>
             </a>
+          </div>
+          </motion.div>
+
+          <div className="divme">
+            <motion.div
+              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              <Tilt
+                className="parallax-effect"
+                perspective={6000}
+                transitionSpeed={9500}
+                glareEnable={false}
+                glareMaxOpacity={0}
+                scale={0.95}
+              >
+                <img
+                  className="imgen2 cybr"
+                  alt="pic"
+                  src="public\assets\images\me3.png"
+                />
+
+                <div className="inner-element">
+                  <div className="eclipse">
+                    <img
+                      className="imgen cybr-btn__glitch"
+                      alt="pic"
+                      src="public\assets\images\me2.png"
+                    />
+                  </div>
+                </div>
+              </Tilt>
+            </motion.div>
           </div>
         </div>
       </div>
