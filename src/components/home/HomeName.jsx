@@ -106,7 +106,7 @@ const Home = () => {
                 <img
                   className="imgen2 cybr"
                   alt="pic"
-                  src="public/assets/images/me3.png"
+                  src="public\assets\images\me3.png"
                 />
 
                 <div className="inner-element">
@@ -114,7 +114,7 @@ const Home = () => {
                     <img
                       className="imgen cybr-btn__glitch"
                       alt="pic"
-                      src="public/assets/images/me2.png"
+                      src="public\assets\images\me2.png"
                     />
                   </div>
                 </div>
