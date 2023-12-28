@@ -106,7 +106,7 @@ const Home = () => {
                 <img
                   className="imgen2 cybr"
                   alt="pic"
-                  src="public\assets\images\me3.png"
+                  src="/portfolio/assets/images/me3.png"
                 />
 
                 <div className="inner-element">
