@@ -47,7 +47,7 @@
 .contitle {
   display: flex;
   height: auto;
-  align-items: center;
+  align-items: flex-end;
 }
 .nameStyle {
   font-size: 30px;
@@ -59,7 +59,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
+  max-width: 360px;
+  width: auto;
   gap: 0.5rem;
 }
 
@@ -86,14 +87,14 @@
 
     height: auto;
 
-    font-size: 25px;
+    font-size: 8vw;
+    // font-size: calc(5px + 7vw);
     letter-spacing: 0px;
 
     color: var(--accent-color);
     // -webkit-text-stroke: 0.8px var(--stroke-icon);
     // text-shadow: 0px 0px 10px var(--shadow-color);
     margin: 5px 0 5px 0;
-    font-size: 30px;
   }
   &__h3 {
     font-family: "Conquera Fine";
@@ -110,7 +111,7 @@
     transition: all 800ms;
     letter-spacing: 2px;
     font-family: "Conquera Fine";
-    font-size: 35px;
+    font-size: 10vw;
     color: var(--text-color);
     height: auto;
 
@@ -140,10 +141,10 @@
   //     // fill: var(--text-color-c);
   //   }
   // }
-  
+
   & .homeIco {
     fill: var(--text-color);
-    
+
     &:hover {
       cursor: pointer;
       background-color: var(--accent-color);
@@ -219,7 +220,7 @@
   .contHomeIco {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     height: 45px;
 
     & :hover {
@@ -231,10 +232,11 @@
     }
 
     & .homeIco {
+      padding: 0 !important;
       &:hover {
         cursor: pointer;
         background-color: var(--accent-color);
-        width: 55px;
+        width: 40px;
 
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 20px;
@@ -246,13 +248,14 @@
       }
     }
     & :nth-child(2) {
-    background-color: var(--background-color);
+      background-color: var(--background-color);
+      width: 25px;
 
       &:hover {
         cursor: pointer;
 
         background-color: var(--accent-color);
-        width: 55px;
+        width: 50px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 10px;
@@ -266,7 +269,7 @@
       &:hover {
         cursor: pointer;
         background-color: var(--accent-color);
-        width: 50px;
+        width: 40px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 10px;
         border-top-right-radius: 5px;
@@ -277,7 +280,7 @@
       }
     }
   }
-  .homeIco{
+  .homeIco {
     cursor: pointer;
     fill: var(--text-color);
     background-color: var(--background-color);
@@ -290,19 +293,21 @@
   .linkda {
     cursor: pointer;
     fill: var(--text-color);
-    width: 40px !important;
+    width: 25px !important;
     height: 100%;
     // padding-left: 10px;
   }
 
   .contHome {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     margin-top: 0;
-
-    margin-left: 20px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    // margin-left: 20px;
 
     background-color: none;
     color: var(--text-color);
@@ -433,12 +438,24 @@
   }
 
   .contHome {
-    padding-top: 80px;
-    position: absolute;
+    // width: 100%;
+    // max-width: 1200px;
+    // padding-top: 80px;
+    // position: absolute;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 0.5em;
+    // margin-top: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    // top: -2rem;
+    height: 100%;
     margin-top: 0;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
 
     background-color: none;
     color: var(--text-color);
@@ -578,14 +595,17 @@
 
   .contHome {
     padding-top: 0;
-    position: absolute;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5em;
     margin-top: 0;
-
     background-color: none;
     color: var(--text-color);
+    width: 100%;
+    max-width: 1500px;
+    z-index: 20;
+    align-items: center;
+    justify-content: space-between;
 
     z-index: 20;
 
