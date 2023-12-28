@@ -114,7 +114,7 @@ const Home = () => {
                     <img
                       className="imgen cybr-btn__glitch"
                       alt="pic"
-                      src="public\assets\images\me2.png"
+                      src="/portfolio/assets/images/me2.png"
                     />
                   </div>
                 </div>
