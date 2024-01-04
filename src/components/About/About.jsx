@@ -16,6 +16,9 @@ const About = () => {
         transition={{ delay: 0.1 }}
         animate={{ y: 0 }}
       >
+      <svg className="homepattern2">
+          <use href={sprite + "#HomePattern"}></use>
+        </svg>
         {/* <h2>About Me</h2> */}
         <div className={s.aboutcont}>
           <motion.div

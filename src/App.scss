@@ -5,6 +5,101 @@
 // .gradientAnimationlight{
 // }
 
+.homepattern{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  transform: translate(-10rem);
+
+  width: auto;
+  height: 100vh;
+
+  fill: var(--text-blur);
+  
+  z-index: 8;
+  
+}
+.homepattern2{
+  position: absolute;
+  top: 70%;
+  right: -22.5%;
+  
+  transform: rotate(180deg);
+
+  width: auto;
+  height: 100vh;
+
+  fill: var(--text-blur);
+  
+  z-index: 8;
+  
+}
+.homepattern3{
+  position: absolute;
+  // top: 70%;
+  left: -10rem;
+  
+  transform: translate(0rem,-16rem) rotate(180deg);
+
+  width: auto;
+  height: 150vh;
+
+  fill: var(--text-blur);
+  
+  z-index: 8;
+  
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+
+  width: 100vw;
+  height: 80px;
+  padding: 1.5rem 0rem 0rem 0rem;
+  margin: 0 auto;
+  z-index: 6666;
+  overflow: hidden;
+
+  &.container{
+    margin-bottom: 0 !important;
+  }
+  &__cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80vw;
+    height: auto;
+    margin: 0;
+
+    // padding: 0rem 2rem;
+  }
+}
+.blurHd{
+    
+  position: absolute;
+  top: -3rem;
+  width: 100%;
+  height: 180px;
+  background-color: var(--background-color-2);
+  backdrop-filter: blur(1vmax);
+  filter: blur(3vmax);
+
+
+}
+
+.darktoogle {
+  height: 35px;
+  position: relative;
+  right: 1.4rem;
+  top: 0.5rem;
+  z-index: 9999;
+  display: block;
+}
 .backgroundAnimatedark,
 .backgroundAnimatelight {
   background-color: none;
@@ -178,12 +273,12 @@
 }
 
 .iconModeDark {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 200;
+  // position: fixed;
+  // right: 0;
+  // top: 0;
+  // z-index: 200;
 
-  transform: translate(-35%, 90%);
+  // transform: translate(-35%, 90%);
 }
 .iconModeDark:hover {
   cursor: pointer;
@@ -202,6 +297,7 @@
   stroke: var(--arrow);
 }
 .moon {
+  width: 50px;
   fill: var(--arrow);
 }
 .headericon {
@@ -323,7 +419,41 @@
   justify-content: space-between;
 }
 
+@media screen and (min-width: 450px) {
+  .header__cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    // padding: 0rem 3rem;
+  }
+  .darktoogle {
+    height: 35px;
+    position: relative;
+    right: 2rem;
+    top: 0.5rem;
+    z-index: 9999;
+    display: block;
+  }
+}
 @media screen and (min-width: 1200px) {
+  .header__cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    // padding: 0rem 3rem;
+    padding-left: 0.8rem;
+  }
+
   .contitem__left {
     width: 80vw;
     max-width: 100%;
@@ -351,12 +481,14 @@
   }
 
   .iconModeDark {
-    position: fixed;
-    right: 0;
-    top: 0;
+    // position: fixed;
+    // right: 0;
+    // top: 0;
+    width: 50px;
+    height: 40px;
     z-index: 200;
 
-    transform: translate(-35%, 90%);
+    // transform: translate(-35%, 90%);
   }
   .iconModeDark:hover {
     cursor: pointer;

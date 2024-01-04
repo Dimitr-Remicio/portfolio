@@ -1,5 +1,6 @@
 .light {
   --background-color: #E6EDEF;
+  --background-color-2: #e6edefd0;
   --bg-tag: #F0F0F0;
   --background-color-0: #f2f2f2ca;
   --background-color-none: #f2f2f200;
@@ -8,8 +9,9 @@
   --background-color-60: #f2f1f1b8;
   --background-color-70: #f1f1f1d7;
   --title-color:#343434;
-  --text-color:#000000;
   
+  --text-color:#000000;
+  --text-blur:#00000010;
   --text-color-50:#0000008c;
   --text-color-80:#0000009a;
 
@@ -49,6 +51,7 @@
 }
 .dark {
   --background-color: #181818;
+  --background-color-2: #18181898;
   --bg-tag: #121312;
   --background-color-0: #0C0E0C;
   --background-color-none: #0c0e0c00;
@@ -57,8 +60,9 @@
   --background-color-60: #0c0e0cb8;
   --background-color-70: #0c0e0cd7;
   --title-color:#000000;
+  
   --text-color:#ffffff;
-
+  --text-blur:#ffffff16;
   --text-color-50:#ffffff6d;
   --text-color-80:#ffffffa3;
   

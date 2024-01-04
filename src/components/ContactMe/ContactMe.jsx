@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Notiflix from "notiflix";
 import { motion } from "framer-motion";
+import sprite from "/src/features/sprite.svg";
 
 function ContactMe() {
   let [data, setData] = useState();
@@ -120,7 +121,10 @@ function ContactMe() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.1 }}
           animate={{ y: 0 }}
-        >
+        ><svg className="homepattern3">
+          <use href={sprite + "#HomePattern"}></use>
+        </svg>
+       
           <h3>Contact Me</h3>
           <p>
             Si estas interesado, no dudes en contactarme puedes hacerlo
@@ -209,6 +213,7 @@ function ContactMe() {
           </div>
         </motion.div>
       </div>
+      
     </div>
   );
 }
