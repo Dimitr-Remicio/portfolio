@@ -313,18 +313,16 @@
   .contHome {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5em;
-    margin-top: 0;
     width: 100%;
     margin: 0 auto;
     height: 100vh;
-    // margin-left: 20px;
-
     background-color: none;
     color: var(--text-color);
-
     z-index: 20;
+    align-items: center;
+    justify-content: flex-start;
 
     &__h1 {
       font-family: "Conquera Heavy";
@@ -450,24 +448,17 @@
   }
 
   .contHome {
-    // width: 100%;
-    // max-width: 1200px;
-    // padding-top: 80px;
-    // position: absolute;
-    // display: flex;
-    // flex-direction: column;
-    // gap: 0.5em;
-    // margin-top: 0;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 0.5em;
-    // top: -2rem;
-    height: 100%;
     margin-top: 0;
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    height: 100vh;
+    // margin-left: 20px;
 
     background-color: none;
     color: var(--text-color);

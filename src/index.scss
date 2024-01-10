@@ -164,8 +164,8 @@ button:active {
     var(--background-color-none) 20%,
     var(--background-color) 100%,
     var(--background-color-none) 20%
-    );
-    // var(--background-color) 40%,
+  );
+  // var(--background-color) 40%,
 }
 
 .blob {
@@ -311,13 +311,11 @@ button:active {
 
   .divme {
     display: block;
-    position: absolute;
-    width: 500px;
-    top: 50%;
-    left: 45%;
-    // right: 0;
-    // margin: 0;
-    transform: translate(0%, -50%);
+    position: relative;
+    width: auto;
+    top: 0%;
+    right: 0%;
+    transform: translateY(0%);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -426,13 +424,11 @@ button:active {
   }
   .divme {
     display: block;
-    position: absolute;
-    width: 500px;
-    // top: 55%;
-    // left: 0;
+    position: relative;
+    width: auto;
+    /* top: 50%; */
     right: 0;
-    // margin: 0;
-    transform: translate(20ch, -50%);
+    
   }
 
   .imgen {
