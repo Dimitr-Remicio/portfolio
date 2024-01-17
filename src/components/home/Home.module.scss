@@ -82,6 +82,70 @@
 
   animation: flicker 5s linear infinite;
 }
+
+// .contArr{
+//   width: 20px !important;
+//   height: 20px !important;
+// }
+.arrowDown{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	transform: rotate(45deg);
+  
+  bottom: 5rem;
+  display: block;
+}
+
+.arrowDown span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-right: 3px solid var(--color-4);
+	border-bottom: 3px solid var(--color-4);
+	// animation: ;
+  animation:arrow-down 1.1s linear infinite ;
+  // animation:flicker 5s linear infinite;
+}
+
+.arrowDown span:nth-child(1){
+	top: -20px;
+	left: -20px;
+  animation-delay: 0;
+
+  
+}
+
+.arrowDown span:nth-child(2){
+	top: -10px;
+	left: -10px;
+  animation-delay: .2s;
+}
+
+.arrowDown span:nth-child(3){
+	top: 0;
+	left: 0;
+  animation-delay: .4s;
+}
+
+.arrowDown span:nth-child(4){
+	top: 10px;
+	left: 10px;
+  animation-delay: .6s;
+}
+
+.arrowDown span:nth-child(5){
+	top: 20px;
+	left: 20px;
+  animation-delay: .8s;
+}
+
+
+
+
 .contHome {
   /* position: absolute; */
   display: flex;
@@ -258,6 +322,9 @@
       :nth-child(3) {
         fill: var(--text-color-c);
       }
+    }
+    .arrowDown{
+      display: none;
     }
 
     & .homeIco {
@@ -863,3 +930,20 @@
     opacity: 1;
   }
 }
+@keyframes arrow-down{
+	0%{
+		border-color: var(--accent-color);
+    transform: translate(0,0);
+    opacity: 0.5;
+	}
+  20%{
+		border-color: var(--accent-color);
+    transform: translate(10px,10px);
+    opacity: 1;
+	}
+	20.1%, 100%{
+    border-color: var(--darken-2);
+    opacity: .2;
+	}
+}
+

@@ -18,6 +18,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import sprite from "/src/features/sprite.svg";
 import Dark from "./components/arrow/arrows";
 import Head from "./components/Head/Head.jsx";
+import Arrow from "./components/home/arrow.jsx";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -93,6 +94,7 @@ function App() {
           <>
             <div className="shadowHome"></div>
             <Home contain={ThemeContext} />
+            <Arrow/>
           </>
         </Container>
 
