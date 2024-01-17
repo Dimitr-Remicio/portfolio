@@ -20,7 +20,7 @@ import Dark from "./components/arrow/arrows";
 import Head from "./components/Head/Head.jsx";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const ThemeContext = createContext(null);
 

@@ -91,7 +91,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-          <div className="divme">
+          <div className="divme" >
             <motion.div
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0 }}
@@ -110,7 +110,7 @@ const Home = () => {
                   alt="pic"
                   src="/portfolio/assets/images/me3.png"
                 />
-
+                <svg className={s.Neongs}><use href={sprite + "#NeonGs"}></use></svg>
                 <div className="inner-element">
                   <div className="eclipse">
                     <img

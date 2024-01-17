@@ -224,12 +224,46 @@ button:active {
   z-index: 25;
   display: none;
 }
-
+.divme {
+  animation: shake 6s ease-in-out infinite alternate;
+  // text-shadow: 0 0 .07em $text,
+  //          -.2em 0 2em $faded,
+  //           .2em 0 2em $faded;
+  user-select: none;
+  &:before {
+    content: attr(t);
+    position: absolute;
+    left: 50%;
+    transform: translate(-20%, .24em);
+    height: .1em;
+    line-height: .5em;
+    width: 100%;
+    animation: scan 500ms ease-in-out infinite alternate random(600)+ms,
+      glitch-anim 300ms ease-in-out infinite alternate;
+    overflow: hidden;
+    opacity: .7;
+  }
+  &:after {
+    $n:random(30);
+    content: attr(t);
+    position: absolute;
+    top: -$n+px;
+    left: 50%;
+    transform: translate(-50%, .34em);
+    height: .5em;
+    line-height: .1em;
+    width: 100%;
+    animation: scan 665ms ease-in-out infinite alternate random(600)+ms,
+      glitch-anim 300ms ease-in-out infinite alternate;
+    overflow: hidden;
+    opacity: .8;
+  }
+}
 .inner-element {
   // height: 230px;
   background-color: #ff000000 !important;
 
-  transform: translateZ(50px) !important;
+  transform: translateZ(70px) !important;
 }
 
 .eclipse {
@@ -265,8 +299,8 @@ button:active {
   // border-bottom-left-radius: 30%;
   bottom: -6rem;
   right: -1.5rem;
-  // transform: translate(-42%,-60%);
   z-index: 25;
+  display: block;
 }
 .imgen2 {
   position: absolute;
@@ -283,6 +317,10 @@ button:active {
   right: -1.2rem;
   // transform: translate(-42%,-60%);
   z-index: 26;
+  // stroke-width: 5px;
+  // stroke: black;
+  // filter: drop-shadow(0px 5px 5px black);
+  // box-shadow: inset 0px 0px 5px black,inset 0px 0px 5px black,inset 0px 0px 5px black;
   transform: translateZ(50px) !important;
 }
 
@@ -339,13 +377,18 @@ button:active {
     margin: 0;
   }
   .eclipse {
+
     background: linear-gradient(
       250deg,
-      var(--accent-color-2) 10%,
-      var(--accent-color) 80%
-    );
+      var(--accent-color) -20%,
+      var(--color-4) 50%,
+      var(--accent-color-2) 100%
+      
+      );
+    // border: none;
     // var(--ball-color-tras) 60%
-    box-shadow: inset 0px 0px 40px 10px var(--accent-color-2);
+    // box-shadow: inset 0px 0px 10px 8px rgba(0, 0, 0, 0.359),inset 0px 0px 50px 5px var(--accent-color-2) ;
+  box-shadow: inset 0px 0px 60px -40px black, inset 0px 0px 0px -5px black;
 
     transition: all 800ms ease;
     // border-radius: 50%;
@@ -443,22 +486,23 @@ button:active {
     right: -0.8rem;
     // transform: translate(-42%,-60%);
     z-index: 25;
+    display: none;
   }
   .imgen2 {
     position: absolute;
-    width: 389px !important;
+    width: 380px !important;
     // overflow: hidden;
     // height: 300px;
     opacity: 1;
     object-fit: cover;
     margin: 0 auto;
-    border-bottom-right-radius: 57%;
-    border-bottom-left-radius: 38%;
-    bottom: 0.8rem;
-    right: -0.8rem;
+    border-bottom-right-radius: 42%;
+    border-bottom-left-radius: 44%;
+    bottom: 0.4rem;
+    right: 0.7rem;
     // transform: translate(-42%,-60%);
     z-index: 26;
-    transform: translateZ(80px) !important;
+    transform: translateZ(70px) !important;
     // filter: drop-shadow(2px 2px 100px var(--background-color));
   }
 }
@@ -532,5 +576,27 @@ button:active {
   }
   to {
     rotate: 360deg;
+  }
+}
+@keyframes scan {
+	$num: random(30);
+	$numVal: $num * .01em;
+	from , 20%, 100%{
+		height: 0;		
+		transform: translate(-50%, .44em);
+	}
+	10%,15% {
+		height: 1em;
+		line-height: .2em;
+		transform: translate(-55%, $numVal);
+	}
+}
+
+@keyframes glitch-anim {
+  $steps: 10;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
   }
 }

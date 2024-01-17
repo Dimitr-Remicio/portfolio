@@ -63,7 +63,25 @@
   width: auto;
   gap: 0.5rem;
 }
+.Neongs {
+  position: absolute;
+  // background-color: white;
+  z-index: 80;
+  transform: translateZ(81px);
 
+  width: 111px;
+  height: 150px;
+  stroke: white;
+  stroke-width: 2px;
+
+  top: 3.8rem;
+  left: 7.8rem;
+
+  filter: drop-shadow(0px 0px 5px var(--accent-color));
+  // box-shadow: inset 0px 0px 5px orange;
+
+  animation: flicker 5s linear infinite;
+}
 .contHome {
   /* position: absolute; */
   display: flex;
@@ -116,6 +134,8 @@
     height: auto;
 
     margin: 0;
+    animation: flicker 10s linear infinite;
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
   }
 
   .barTyping {
@@ -359,6 +379,8 @@
       font-size: 38px;
       color: var(--text-color);
       height: auto;
+      animation: none;
+      filter: none;
 
       margin: 0;
     }
@@ -380,6 +402,22 @@
     }
   }
 }
+@media screen and (min-width: 850px) {
+  .contHome {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: none;
+    color: var(--text-color);
+    z-index: 20;
+    align-items: center;
+    justify-content:space-around;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section {
     width: 100%;
@@ -396,6 +434,25 @@
     z-index: 10;
 
     backdrop-filter: blur(0vmax);
+  }
+  .Neongs {
+    position: absolute;
+    // background-color: white;
+    z-index: 80;
+    transform: translateZ(75px);
+
+    width: 114px;
+    height: 150px;
+    stroke: white;
+    stroke-width: 2px;
+
+    top: -0.78rem;
+    left: 6.78rem;
+
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    // box-shadow: inset 0px 0px 5px orange;
+
+    animation: flicker 5s linear infinite;
   }
   .meimg {
     position: relative;
@@ -679,5 +736,130 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes flicker {
+  from {
+    opacity: 0.5;
+  }
+
+  4% {
+    opacity: 0.8;
+  }
+
+  6% {
+    opacity: 0.55;
+  }
+
+  8% {
+    opacity: 0.85;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.8;
+  }
+
+  14% {
+    opacity: 0.85;
+  }
+
+  16% {
+    opacity: 0.88;
+  }
+
+  17% {
+    opacity: 0.5;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.78;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.52;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.73;
+  }
+
+  95% {
+    opacity: 0.85;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
   }
 }
