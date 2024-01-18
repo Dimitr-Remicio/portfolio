@@ -21,7 +21,7 @@ import Head from "./components/Head/Head.jsx";
 import Arrow from "./components/home/Arrow.jsx";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   const ThemeContext = createContext(null);
 
