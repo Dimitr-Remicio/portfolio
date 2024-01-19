@@ -11,22 +11,7 @@
     "inProcess": false,
     "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
   },
-  {
-    "id": "2",
-    "number": "02",
-    "name": "yersi",
-    "title": "Yersi",
-    "description": "Sumérgete en una experiencia de compras en línea sin igual, donde la diversidad y la calidad se unen para ofrecerte una gama infinita de productos a tu alcance. ",
-    "image": "https://i.postimg.cc/qq8yvh8m/yersi-preview-dark.jpg",
-    "orientation": "left",
-    "link": "https://dimitr-remicio.github.io/Yersi/",
-    "inProcess": true,
-    "items": {
-      "0": "html",
-      "1": "css",
-      "2": "javascript"
-    }
-  },
+ 
   {
     "id": "3",
     "number": "03",
