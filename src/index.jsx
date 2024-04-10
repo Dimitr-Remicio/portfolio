@@ -4,7 +4,7 @@ import App from './App.jsx';
 import './other.scss'
 // import Error from './error/Working.jsx';
 
-import Headers from './features/head/head';
+import Headers from './features/head/head.jsx';
 // style's ∇
 
 import './index.scss';
