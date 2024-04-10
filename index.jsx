@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import App from './src/App.jsx';
 import './other.scss'
 // import Error from './error/Working.jsx';
 
-import Headers from './features/head/head.jsx';
+import Headers from './src/features/head/head.jsx';
 // style's ∇
 
 import './index.scss';
