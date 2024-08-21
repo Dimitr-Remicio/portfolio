@@ -11,7 +11,7 @@
     "orientation": "right",
     "link": "https://dimitr-remicio.github.io/iceCream2.0/",
     "inProcess": false,
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
+    "items": ["html", "scss", "javascript"]
   },
   {
     "id": "4",
@@ -22,8 +22,7 @@
     "description": "¿cortes de cabello y cuidado facial de primera calidad?... Nuestro equipo de expertos barberos combina habilidad y pasión para ofrecerte resultados que reflejen tu estilo único y resalten tu confianza.",
     "orientation": "left",
     "link": "https://dimitr-remicio.github.io/BarberShop/",
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
-  },
+    "items": ["html", "css", "scss"]  },
   {
     "id": "5",
     "number": "05",
@@ -34,8 +33,7 @@
     "orientation": "right",
     "link": "https://dimitr-remicio.github.io/Filmoteka1/",
     "inProcess": false,
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
-  },
+    "items": ["html", "css", "javascript"]  },
   {
     "id": "6",
     "number": "06",
@@ -46,8 +44,7 @@
     "orientation": "left",
     "link": "https://dimitr-remicio.github.io/filmoteka2/",
     "inProcess": false,
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
-  },
+    "items": ["html", "css", "javascript", "react"]  },
   {
     "id": "7",
     "number": "07",
@@ -58,8 +55,7 @@
     "orientation": "right",
     "link": "https://dimitr-remicio.github.io/SWAPI-Project/",
     "inProcess": false,
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
-  },
+    "items": ["html", "css", "javascript"]  },
   {
     "id": "8",
     "number": "08",
@@ -70,6 +66,5 @@
     "orientation": "left",
     "link": "https://dimitr-remicio.github.io/SlimMom/",
     "inProcess": false,
-    "items": [{ "item": "html" }, { "item": "css" }, { "item": "javascript" }]
-  }
+    "items": ["html", "css", "javascript", "react"]  }
 ]
