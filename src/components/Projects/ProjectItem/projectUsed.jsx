@@ -21,7 +21,7 @@ function ProjectUsed({ data }) {
           <div key={key} class="Tag-Item">
             {item}
             <div class="Tag-blr"></div>
-          <img src={`/public/assets/images/${item}.png`} width="22" height="22"/>
+          <img src={`/portfolio/assets/images/${item}.png`} width="22" height="22"/>
           </div>
         );
       })}
