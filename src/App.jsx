@@ -19,6 +19,8 @@ import sprite from "/src/features/sprite.svg";
 import Dark from "./components/arrow/arrows";
 import Head from "./components/Head/Head.jsx";
 import Arrow from "./components/home/Arrow.jsx";
+import './index.scss';
+
 
 function App() {
   const [theme, setTheme] = useState("light");
