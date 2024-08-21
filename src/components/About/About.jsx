@@ -41,7 +41,7 @@ const About = () => {
                 // viewBox="2 3 300 10"
                 viewBox="0 -25 700 50"
                 width="100%"
-                height="auto"
+                height=""
               >
                 <use
                   className={s.name}
