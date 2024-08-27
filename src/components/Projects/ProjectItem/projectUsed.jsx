@@ -7,20 +7,18 @@ function ProjectUsed({ data }) {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    return () => {
-      setItem(data);
-    };
+    setItem(data);
   }, [data]);
 
   console.log(item);
 
   return (
-    <div class="Tag-PR">
+    <div className="Tag-PR">
       {item.map((item, key) => {
         return (
-          <div key={key} class="Tag-Item">
+          <div key={key} className="Tag-Item">
             {item}
-            <div class="Tag-blr"></div>
+            <div className="Tag-blr"></div>
           <img src={`/portfolio/assets/images/${item}.png`} width="22" height="22"/>
           </div>
         );
