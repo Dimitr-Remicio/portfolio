@@ -67,7 +67,7 @@ function Dark() {
           </a>
         </div>
         <div className="content_header">
-          <p style={{ color: "white" }}>g</p>
+          {/* <p style={{ color: "white" }}>g</p> */}
         </div>
       </div>
       {/* 

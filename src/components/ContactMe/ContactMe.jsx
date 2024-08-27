@@ -131,7 +131,7 @@ function ContactMe() {
             completando este formulario...
           </p>
           <h4>Email</h4>
-          <p>dimitr.darm27@gmail.com</p>
+          <p className="emailTag" style={{width:"14.5rem", fontSize:"13px"}}>dimitr.darm27@gmail.com</p>
         </motion.div>
         <motion.div
           className={s.mediacont}

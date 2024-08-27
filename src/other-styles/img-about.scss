@@ -243,14 +243,13 @@
     object-fit: cover;
     image-resolution: crisp-edges;
 
-    // filter: blur(0.2vw);
+    filter: blur(0.2vw);
     // filter: grayscale(0.1);
-    filter: opacity(20%) saturate(0%) contrast(20%) invert(60%);  
     transition: all 400ms ease;
     &:hover {
       transition: all 200ms;
       transform: scale(1.01);
-      filter: opacity(100%) saturate(100%) contrast(100%) invert(0%);  
+      filter: blur(0vw);
     }
     &:hover ~ .textJpans{
       color: var(--black);

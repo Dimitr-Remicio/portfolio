@@ -4,6 +4,7 @@ import s from "./Home.module.scss";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import sprite from "/src/features/sprite.svg";
+import Cvdoc from "/public/assets/docs/DimitrCV.pdf";
 
 const Home = () => {
   const el = useRef(null);
@@ -11,8 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Front End " + dev, "Grapich Designer"], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
+      strings: ["Front End " + dev, "Grapich Designer"],
       startDelay: 1000,
       typeSpeed: 100,
       backSpeed: 50,
@@ -64,12 +64,28 @@ const Home = () => {
             </div>
             <div className={s.contHomeIco}>
               <a
+                className={s.staticTag}
+                href="assets/docs/DimitrCV.pdf"
+                download="dimitr resume"
+                target="_blank"
+              >
+                <h3
+                  style={{
+                    margin: "0 auto",
+                    padding: "0px 0px",
+                    height: "30px",
+                  }}
+                >
+                  cv
+                </h3>
+              </a>
+              <a
                 href="https://github.com/Dimitr-Remicio"
                 target="_blank"
                 rel="noreferrer"
-                className={s.homeIco}
+                className={s.staticTag}
               >
-                <svg className={s.linkda}>
+                <svg className={s.linkda} height="20">
                   <use href={sprite + "#icon-github"}></use>
                 </svg>
               </a>
@@ -77,21 +93,22 @@ const Home = () => {
                 href="https://www.linkedin.com/in/dimitr-remicio-4b039017b"
                 target="_blank"
                 rel="noreferrer"
-                className={s.homeIco}
+                className={s.staticTag}
               >
-                <svg className={s.linkda}>
+                <svg className={s.linkda} height="20">
                   <use href={sprite + "#icon-linkedin"}></use>
                 </svg>
               </a>
-              <a href="#contact" rel="noreferrer" className={s.homeIco}>
-                <svg className={s.linkda}>
+              <a href="#contact" rel="noreferrer" className={s.staticTag}>
+                <svg className={s.linkda} height="20">
                   <use href={sprite + "#icon-envelope-o"}></use>
                 </svg>
               </a>
             </div>
+            <p className="emailTag">dimitr.darm27@gmail.com</p>
           </motion.div>
 
-          <div className="divme" >
+          <div className="divme">
             <motion.div
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0 }}
@@ -110,7 +127,9 @@ const Home = () => {
                   alt="pic"
                   src="/portfolio/assets/images/me3.png"
                 />
-                <svg className={s.Neongs}><use href={sprite + "#NeonGs"}></use></svg>
+                <svg className={s.Neongs}>
+                  <use href={sprite + "#NeonGs"}></use>
+                </svg>
                 <div className="inner-element">
                   <div className="eclipse">
                     <img

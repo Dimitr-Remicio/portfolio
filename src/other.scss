@@ -13,6 +13,15 @@
 
 }
 
+.emailTag{
+  background-color: var(--tg);
+  color: var(--text-color);
+  // margin: 0 auto;
+  padding: 0rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 10px;
+}
+
 .Tag-Item{
   display: flex;
   align-items: center;
