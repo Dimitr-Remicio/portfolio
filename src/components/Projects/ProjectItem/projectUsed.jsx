@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import sprite from "../../../features/sprite.svg";
+import PropTypes from 'prop-types';
+
 
 function ProjectUsed({ data }) {
-  // const items = JSON.stringify(data);
 
   const [item, setItem] = useState([]);
 
@@ -10,7 +11,6 @@ function ProjectUsed({ data }) {
     setItem(data);
   }, [data]);
 
-  console.log(item);
 
   return (
     <div className="Tag-PR">
@@ -26,9 +26,10 @@ function ProjectUsed({ data }) {
     </div>
   );
 
-  //   return `
-  //       <P>${items}</P>
-  //   `
+}
+
+ProjectUsed.propTypes = {
+  data: PropTypes.array
 }
 
 export default ProjectUsed;

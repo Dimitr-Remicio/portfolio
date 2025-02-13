@@ -109,7 +109,6 @@ function ContactMe() {
       );
   }
 
-  console.log(data);
 
   return (
     <div className={s.contact} id="contact">
